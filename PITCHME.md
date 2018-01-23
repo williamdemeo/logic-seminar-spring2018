@@ -170,7 +170,7 @@ result that differ in "efficiency."</li></div>
 <ul>
 <li class="fragment"> Instead of dwelling on paradigms for formalizing math, consider ways to extend programming languages, e.g. richer data types, new paradigms/techniques.</li>
 
-<li class="fragment"> We look at a functional language called Lean, and consider
+<li class="fragment"> We will look at a functional language called <a style="color:purple">Lean</a>, and consider
 how it makes programming easier; some classical algorithms become easy or obvious;
 previously inconceivable programs are possible.</li>
 
@@ -193,16 +193,17 @@ by virtue of the their inherent logical content!</p>
 +++
 
 ## Sets vs Types: redux
-
-* In <a style="color:green">Set Theory</a>,
+<ul>
+<li class="fragment"> In <a style="color:green">Set Theory</a>,
 	$3 \in \mathbb N$ means  
-	"3 is an element of the <a style="color:green">set</a> of natural numbers"
+	"3 is an element of the <a style="color:green">set</a> of natural numbers"</li>
 
-* In <a style="color:#e7ad52">Type Theory</a>,
+<li class="fragment"> In <a style="color:#e7ad52">Type Theory</a>,
 	$3 : \mathbb N$ means  
-	"3 is an element of the <a style="color:#e7ad52">type</a> of natural numbers"
+	"3 is an element of the <a style="color:#e7ad52">type</a> of natural numbers"</li>
 
-* Seems trivial... but here's the significance...
+<li class="fragment"> Seems trivial... but here's the significance...</li>
+</ul>
     <!-- 1. $3 \in \mathbb N$ is a <a style="color:green">proposition</a>  -->
     <!-- 2. $3 : \mathbb N$ is a <a style="color:#e7ad52">judgment</a>, ie a piece  -->
     <!--    of <em>static information</em> -->
@@ -214,14 +215,16 @@ by virtue of the their inherent logical content!</p>
 
 ## Sets vs Types
 
-* While  <a style="color:green">$3 \in \mathbb N$</a> is a proposition,  <a style="color:#e7ad52">$3 : \mathbb N$</a> is a *judgment*; ie a piece of static information.
+<ul>
+<li class="fragment"> While  <a style="color:green">$3 \in \mathbb N$</a> is a proposition,  <a style="color:#e7ad52">$3 : \mathbb N$</a> is a *judgment*; ie a piece of static information.</li>
 
-* In <a style="color:#e7ad52">Type Theory</a> every object and every expression has a (unique) type
-  which is statically determined.
+<li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> every object and every expression has a (unique) type
+  which is statically determined.</li>
 
-* Hence it doesn't make sense to use <a style="color:#e7ad52">$a : A$</a> as a proposition.
+<li class="fragment"> Hence it doesn't make sense to use <a style="color:#e7ad52">$a : A$</a> as a proposition.</li>
+</ul>
 
-<!-- * This is similar to the distinction between statically and dynamically typed -->
+<!-- <li class="fragment"> This is similar to the distinction between statically and dynamically typed -->
 <!--   programming languages. While in dynamically typed languages there are -->
 <!--   runtime functions to check the type of an object this doesn't make sense -->
 <!--   in statically typed languages. -->
@@ -230,48 +233,55 @@ by virtue of the their inherent logical content!</p>
 
 ## Sets vs Types
 
-* In <a style="color:green">Set Theory</a> we define $P \subseteq Q$ as $\forall x . x \in P \to x \in Q$.  
-  This doesn't work in <a style="color:#e7ad52">Type Theory</a> since $x \in P$ is not a proposition.
+<ul>
+<li class="fragment"> In <a style="color:green">Set Theory</a> we define
+$P \subseteq Q$ as   
+$\forall x . x \in P \to x \in Q$ </li>
 
-* <a style="color:green">Set theoretic</a> operations like $\cup$ or $\cap$ are not operations on
-  <a style="color:#e7ad52">types</a>  
-  ...but they can be defined as operations on predicates (subsets) of
-  a given type. $\subseteq$ can be defined as a predicate on such subsets.
+<li class="fragment"> This doesn't work in <a style="color:#e7ad52">Type Theory</a> since $x \in P$ is not a proposition.</li>
 
----
+<li class="fragment"> <a style="color:green">Set theoretic</a> operations like $\cup$ or $\cap$ are not operations on <a style="color:#e7ad52">types</a> </li>
+
+<li class="fragment"> ...but they can be defined as operations on predicates (subsets) of
+  a given type. $\subseteq$ can be defined as a predicate on such subsets.</li>
+</ul>
 
 +++
 
 ## Sets vs Types
 
-* <a style="color:#e7ad52">Type Theory</a> is **extensional** in the sense that we
-  can't talk about details of encodings.
+<ul>
+<li class="fragment"> <a style="color:#e7ad52">Type Theory</a> is **extensional** in the sense that we
+  can't talk about details of encodings.</li>
 
-* In <a style="color:green">Set Theory</a> we can ask whether
+<li class="fragment"> In <a style="color:green">Set Theory</a> we can ask whether
   <a style="color:green">$\mathbb N \cap \mathsf{Bool} = \emptyset$</a>    
   Or whether <a style="color:green">$2 \in 3$</a>.
   The answer to these questions depends on  
-  the choice of representation of the objects and sets involved.
+  the choice of representation of the objects and sets involved.</li>
+</ul>
 
 +++
 
 ## Sets vs Types
 
-* In addition to the judgment <a style="color:#e7ad52">$a : A$</a>, we introduce the
+<ul>
+<li class="fragment"> In addition to the judgment <a style="color:#e7ad52">$a : A$</a>, we introduce the
   judgment <a style="color:#e7ad52">$a \equiv_A b$</a> which means <a style="color:#e7ad52">$a$</a>
-  and <a style="color:#e7ad52">$b$</a> are **definitionally equal**.
+  and <a style="color:#e7ad52">$b$</a> are **definitionally equal**.</li>
 
-* Definitional equality is a *static* property, hence it doesn't make sense as a proposition.
+<li class="fragment"> Definitional equality is a *static* property, hence it doesn't make sense as a proposition.
   (Later we introduce **propositional equality** <a style="color:#e7ad52">$a =_A b$</a>
-  which can be used in propositions)
+  which can be used in propositions)</li>
 
-* We write definitions using <a style="color:#e7ad52">$:\equiv$</a>, eg
+<li class="fragment"> We write definitions using <a style="color:#e7ad52">$:\equiv$</a>, eg
   <a style="color:#e7ad52">$n :\equiv 3$</a> defines <a style="color:#e7ad52">$n : \mathbb N$</a> to be
-  <a style="color:#e7ad52">3</a>
+  <a style="color:#e7ad52">3</a></li>
 
-* <a style="color:#e7ad52">Type Theory</a> is more restrictive than
+<li class="fragment"> <a style="color:#e7ad52">Type Theory</a> is more restrictive than
   <a style="color:green">Set Theory</a>...   
-  but this has some benefits...
+  but this has some benefits...</li>
+</ul>
 
 ---
 
