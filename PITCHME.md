@@ -392,7 +392,7 @@ elements of its codomain.</li>
 
 <ul>
 <li class="fragment"> In Type Theory, as in functional programming, we usually
-try to save parentheses and write $f x :\equiv x + 3$
+try to save parentheses and write $f x \equiv x + 3$
 and $f 2$
 </li>
 <li class="fragment"> The explicit definition of a function requires a name but we want
