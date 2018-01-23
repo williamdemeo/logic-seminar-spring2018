@@ -96,7 +96,9 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 +++
 
 <!-- ------ JPS ------------ -->
-<img style="float: right width="200" src="assets/image/jps.jpg">
+<div class="fragment fade-left">
+<img style="float: right width="200" src="assets/image/jps.jpg"/>
+</div>
 <!-- <img style="float:right"src="assets/image/jps.jpg" alt="Choices" style="width: 350px;float: right"/> -->
 
 <ul>
