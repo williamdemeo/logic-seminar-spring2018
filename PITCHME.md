@@ -142,19 +142,21 @@ be justified on practical (and maybe philosophical) grounds.</li>
 
 <p class="fragment fade-left">
 Nobody would question the utility of computer programs on the grounds that we
-can write those programs on a piece of paper faster and more easily in pseudo-code.
-This would be silly, since <a style="color:#e7ad52">*programs written on paper cannot be executed*</a>
+can write those programs on a piece of paper faster and more easily in pseudo-code.</p>
+
+<p class="fragment">
+This would be silly since <a style="color:#e7ad52">*programs written on paper cannot be executed*</a>
 </p>
 
 <p class="fragment fade-left">
 The objection that formalizing math on computer
 is pointless because we can more easily write it down on a piece of paper can
-be disputed on similar grounds.  But...  
+be disputed on similar grounds.
 </p>
-<p class="fragment fade-left">
-<a style="color:#e7ad52">*proofs of math theorems cannot be executed*</a>  
+<p class="fragment">
+<a style="color:#e7ad52">*but proofs of math theorems cannot be executed*</a>  
 </p>
-<p class="fragment fade-left"> ...or can they? </p>
+<p class="fragment"> ...or can they? </p>
 
 +++
 
