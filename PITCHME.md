@@ -250,51 +250,7 @@ $\forall x . x \in P \to x \in Q$ </li>
 
 +++
 
-## Sets vs Types
 
-<ul>
-<li class="fragment"> <a style="color:#e7ad52">Type Theory</a> is **extensional** in the sense that we
-  can't talk about details of encodings.</li>
-
-<li class="fragment"> In <a style="color:green">Set Theory</a> we can ask whether
-  <a style="color:green">$\mathbb N \cap \mathsf{Bool} = \emptyset$</a>    
-  Or whether <a style="color:green">$2 \in 3$</a>.
-  The answer to these questions depends on  
-  the choice of representation of the objects and sets involved.</li>
-</ul>
-
-+++
-
-## Sets vs Types
-
-<ul>
-<li class="fragment"> In addition to the judgment <a style="color:#e7ad52">$a : A$</a>, we introduce the
-  judgment <a style="color:#e7ad52">$a \equiv_A b$</a> which means <a style="color:#e7ad52">$a$</a>
-  and <a style="color:#e7ad52">$b$</a> are **definitionally equal**.</li>
-
-<li class="fragment"> Definitional equality is a *static* property, hence it doesn't make sense as a proposition.
-  (Later we introduce **propositional equality** <a style="color:#e7ad52">$a =_A b$</a>
-  which can be used in propositions)</li>
-
-<li class="fragment"> We write definitions using <a style="color:#e7ad52">$:\equiv$</a>, eg
-  <a style="color:#e7ad52">$n :\equiv 3$</a> defines <a style="color:#e7ad52">$n : \mathbb N$</a> to be
-  <a style="color:#e7ad52">3</a></li>
-
-<li class="fragment"> <a style="color:#e7ad52">Type Theory</a> is more restrictive than
-  <a style="color:green">Set Theory</a>...   
-  but this has some benefits...</li>
-</ul>
-
----
-
-## Univalence Axiom
-
-Since we can't talk about intensional aspects (implementation details),
-we can identify objects which have the same extensional behavior.
-This is reflected in the univalence axiom,
-which identifies **extensionally equivalent** types.
-
----
 
 ## Truth Vs. Evidence
 Another important difference between Set Theory and Type Theory is the
@@ -310,15 +266,21 @@ Using the <a style="color:#e7ad52">propositions-as-types</a> translation
 we can assign to any proposition $P$ the type of its evidence $[[P]]$
 as follows:
 
-\begin{align*}
-[[P \Rightarrow Q]] &\equiv [[P]] \to [[Q]]\\
-[[P ∧ Q]] &≡ [[P ]] × [[Q]]\\
-[[\mathsf{True}]] &≡ 1\\
-[[P ∨ Q]] &≡ [[P ]] + [[Q]]\\
-[[\mathsf{False}]] &≡ 0\\
-[[∀x : A.P ]] &≡ Πx : A.[[P ]]\\
-[[∃x : A.P ]] &≡ Σx : A.[[P ]]
-\end{align*}
+$[[P \Rightarrow Q]] \equiv [[P]] \to [[Q]]$
+
+$[[P ∧ Q]] &≡ [[P ]] × [[Q]]$
+
+$[[\mathsf{True}]] &≡ 1$
+
+$[[P ∨ Q]] &≡ [[P ]] + [[Q]]$
+
+$[[\mathsf{False}]] &≡ 0$
+
+$[[∀x : A.P ]] &≡ Πx : A.[[P ]]$
+
+$[[∃x : A.P ]] &≡ Σx : A.[[P ]]$
+
++++
 
 0 is the empty type, 1 is the type with exactly one element
 
@@ -328,56 +290,52 @@ disjoint union +, product ×, and → (function) types are familiar
 
 ---
 
-## End of Part 2
-
----
-
-# Part 3: Non-dependent types
-
----
+# Non-dependent types
 
 ## Universes
-
+<ul>
 <li class="fragment"> To get started we have to say what a *type* is. We could introduce another judgement, but
-  instead we'll use **universes.**
+  instead we'll use **universes.**</li>
 
 <li class="fragment"> A **universe** is a type of types. For example, to say that $\mathbb N$ is a type,
   we write <a style="color:#e7ad52">$\mathbb N : \mathsf{Type}$</a>, where
-  <a style="color:#e7ad52">$\mathsf{Type}$</a> is a universe.
+  <a style="color:#e7ad52">$\mathsf{Type}$</a> is a universe.</li>
 
 <li class="fragment"> But what is the type of <a style="color:#e7ad52">$\mathsf{Type}$</a>? Do we have
-  <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a>?
+  <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a>?</li>
 
 <li class="fragment"> This doesn't work in   <a style="color:green">Set Theory</a> due to **Russell's paradox**  
-  (consider the set of all sets that don't contain themselves)
+  (consider the set of all sets that don't contain themselves)</li>
 
-<li class="fragment"> In Type Theory <a style="color:#e7ad52">$a : A$</a> is not a Prop, hence it's not immediately clear wether
-  the paradox still occurs.
+<li class="fragment"> In Type Theory <a style="color:#e7ad52">$a : A$</a> is not a Prop, hence it's not immediately clear wether the paradox still occurs.</li>
+</ul>
 
----
++++
 
+<ul>
 <li class="fragment"> It turns out that a Type Theory with <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a> does
-  exhibit **Russell's paradox**.
+  exhibit **Russell's paradox**.</li>
 
 <li class="fragment"> Construct the tree <a style="color:#e7ad52">$T : \mathsf{Tree}$</a> of all trees
   that don't have themselves as immediate subtrees. Then <a style="color:#e7ad52">$T$</a>
-  is a subtree of itself iff it isn't.
+  is a subtree of itself iff it isn't.</li>
 
-+ To avoid this, we introduce a hierarchy of universes
+<li class="fragment"> To avoid this, we introduce a hierarchy of universes
   <a style="color:#e7ad52">
   $$\mathsf{Type}_0 : \mathsf{Type}_1 : \mathsf{Type}_2 : \cdots$$
   </a>
   and we decree that any <a style="color:#e7ad52">$A : \mathsf{Type}_i$</a>
-  can be *lifted* to <a style="color:#e7ad52">$A^+ : \mathsf{Type}_{i+1}$</a>
+  can be *lifted* to <a style="color:#e7ad52">$A^+ : \mathsf{Type}_{i+1}$</a></li>
 
 <li class="fragment"> Being explicit about universe levels can be quite annoying.  
-  In notation we ignore the levels, but take care to avoid using universes in a cyclic way.
+  In notation we ignore the levels, but take care to avoid using universes in a cyclic way.</li>
 
 <li class="fragment"> That is we write <a style="color:#e7ad52">$\mathsf{Type}$</a> as a metavariable for
   <a style="color:#e7ad52">$\mathsf{Type}_i$</a> and assume that all levels
-  act the same unless stated otherwise.
+  act the same unless stated otherwise.</li>
+</ul>
 
----
++++
 
 ## Functions
 
@@ -403,7 +361,7 @@ disjoint union +, product ×, and → (function) types are familiar
 
 <li class="fragment"> If we know how to calculate $2 + 3$ we can conclude $f (2) \equiv 5$
 
----
++++
 
 ## A word about syntax
 
