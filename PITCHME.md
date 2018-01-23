@@ -109,10 +109,10 @@ We might have an object $x$ and ask wether this object is a **nat** ($x\in \math
 alt="Choices: JPS" style="float: right;width: 350px" />
 </div>
 <li class="fragment"> A computer program must be  
-  based on *some* formal system</li>
-<li class="fragment"> **ZFC** is not the obvious choice</li>
-<li class="fragment"> **constructive type theory**  
-  can be justified on both philosophical and practical grounds</li>
+  based on *some* formal system.</li>
+<li class="fragment"> **ZFC** is not the obvious choice.</li>
+<li class="fragment"> **Constructive type theory**  
+can be justified on practical (and maybe philosophical) grounds.</li>
   </ul>
 
 +++
