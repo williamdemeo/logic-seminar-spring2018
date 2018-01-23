@@ -296,9 +296,7 @@ disjoint union +, product ×, and → (function) types are familiar
 
 Π and Σ may be less familiar; we look at them later.
 
----
-
-## Non-dependent types
++++
 
 ### Universes
 <ul>
@@ -319,6 +317,8 @@ disjoint union +, product ×, and → (function) types are familiar
 </ul>
 
 +++
+
+### Universes
 
 <ul>
 <li class="fragment"> It turns out a Type Theory with <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a> does
@@ -355,9 +355,10 @@ $\mathsf{Type}_i$ and assume that all levels act the same unless stated otherwis
 
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> **function** is a primitive concept.
 </li>
-<li class="fragment"> The basic idea is the same as in functional programming: a
-  function is a **black box**; you feed it elements from its domain and out come
-  elements of its codomain.</li>
+<li class="fragment"> The basic idea is the same as in functional programming:   
+a function is a **black box**  
+you feed it elements from its domain and out come
+elements of its codomain.</li>
 
 <li class="fragment"> Hence given $A, B : \mathsf{Type}$ we introduce the type of
   functions   
@@ -374,13 +375,13 @@ $\mathsf{Type}_i$ and assume that all levels act the same unless stated otherwis
 
 <li class="fragment"> We can define a function
   $f : \mathbb{N} \to \mathbb{N}$
-  explicitly, eg, $f (x) :\equiv x <li class="fragment"> 3$.
+  explicitly, eg, $f (x) :\equiv x +3$
 </li>
-<li class="fragment"> We can now apply, $f (2) : \mathbb{N}$, and
+<li class="fragment"> We can apply, $f (2) : \mathbb{N}$, and
   evaluate this application by replacing all
-  $x$'s in the body with 2; hence $f (2) \equiv 2 + 3$
+  $x$'s with 2; hence $f (2) \equiv 2 + 3$
 </li>
-<li class="fragment"> If we know how to calculate $2 + 3$ we can conclude $f (2) \equiv 5$
+<li class="fragment"> If we can calculate $2 + 3$, we conclude $f (2) \equiv 5$
 </li>
 
 </ul>
