@@ -12,8 +12,8 @@
 + [Thorsten Altenkirch's notes on Type Theory](http://www.cs.nott.ac.uk/~psztxa/ewscs-17/notes.pdf)  
 www.cs.nott.ac.uk/~psztxa/ewscs-17/notes.pdf
 
-+ [Paul Levy's notes on Lambda Calculus](http://www.cs.bham.ac.uk/~pbl/mgsall.pdf)  
-http://www.cs.bham.ac.uk/~pbl/mgsall.pdf
++ [Paul Levy's notes on Lambda Calculus](http://www.cs.bham.ac.uk/~pbl/mgsall.pdf)   
+www.cs.bham.ac.uk/~pbl/mgsall.pdf
 
 +++
 
@@ -26,7 +26,8 @@ http://www.cs.bham.ac.uk/~pbl/mgsall.pdf
   Levy (2014) www.cs.bham.ac.uk/~pbl/mgs2014lam.html
 
 + [Abstraction and Computation](http://www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf)    
-Capretta's PhD thesis (2002) www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
+Capretta (2002)  
+www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 + [CMU course on HoTT](http://www.cs.cmu.edu/~rwh/courses/hott/)   
   Harper (2013) www.cs.cmu.edu/~rwh/courses/hott/
@@ -51,7 +52,7 @@ Capretta's PhD thesis (2002) www.cs.nott.ac.uk/~vxc/publications/Abstraction_Com
 
 ## Type Theory vs. Set Theory
 <ul>
-<li>In <a style="color:#e7ad52">Type Theory</a> we only make objects of a certain type---*the type comes first*---and then we can construct elements of that type.</li>
+<li>In <a style="color:#e7ad52">Type Theory</a> we are only allowed to make objects of a certain type---*the type comes first*---and then we may construct elements of a given type.</li>
 
 <li class="fragment"> In <a style="color:green">Set Theory</a> all objects are there already and we can organize them into different sets; we might have an object $x$ and ask wether this object is a **nat** ($x\in \mathbb N$) or a **real** ($x \in \mathbb R$).</li>
 </ul>
@@ -61,7 +62,8 @@ Capretta's PhD thesis (2002) www.cs.nott.ac.uk/~vxc/publications/Abstraction_Com
 ## Type Theory vs. Set Theory
 <ul>
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> we think of $x : \mathbb{N}$ as
-  meaning that $x$ is a natural number "by birth" and we can ask whether $x$ is a real number.</li>
+  meaning that $x$ is a natural number "by birth".  </li>
+<li class="fragment">And then we might ask whether $x$ is also a real number.</li>
 <p>
 <li class="fragment"> We say <a style="color:#e7ad52">$x : \mathbb N$</a> is a **judgement** while
   <a style="color:green">$x \in \mathbb N$</a> is a **proposition**</li>
