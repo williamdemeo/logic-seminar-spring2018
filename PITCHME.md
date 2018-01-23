@@ -150,19 +150,16 @@ be disputed on similar grounds.  But...
 ---
 
 <ul>
-<li class="fragment"> *Classical* proofs cannot always be executed,   
-but *constructive* proofs can, in a sense.</li>
+<li class="fragment"> *Classical* proofs cannot always be executed, but *constructive* proofs can, in a sense.</li>
 
-<li class="fragment"> Constructive proofs give algorithms to  
-compute all objects claimed to exist and  
-decide all properties claimed decidable.</li>
+<li class="fragment"> Constructive proofs give algorithms to compute all objects claimed to exist and decide all properties claimed decidable.</li>
 <!-- ------ DVF ------------ -->
 <div class="fragment fade-left">
+<img src="assets/image/Darth-Vader-faith.jpg" alt="Darth Vader faith" style="width: 300px;float: right"/>
 <li class="fragment"> It may seem strange to think of a proof  
 as a program, even stranger that there  
 can be different proofs of the same  
-result that differ in "efficiency."</li>
-<img src="assets/image/Darth-Vader-faith.jpg" alt="Darth Vader faith" style="width: 300px;float: right"/></div>
+result that differ in "efficiency."</li></div>
 </ul>
 
 ---
