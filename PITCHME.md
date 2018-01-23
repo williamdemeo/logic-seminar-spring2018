@@ -98,14 +98,14 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 <!-- ------ JPS ------------ -->
 <!-- <img style="float:right" src="assets/image/jps.jpg" alt="Choices" style="width: 350px;float: right"/> -->
 
-<ul>
-<li class="fragment"> But to do math on a computer  
-  *we must make a choice!*
 <!-- ------ DVF ------------ -->
 <div class="fragment fade-left">
 <img src="assets/image/jps.jpg"
-alt="Choices: JPS" style="float: right;width: 300px" />
-</div></li>
+alt="Choices: JPS" style="float: right;width: 350px" />
+</div>
+<ul>
+<li class="fragment"> But to do math on a computer  
+  *we must make a choice!*</li>
 <li class="fragment"> A computer program must be  
   based on *some* formal system</li>
 
@@ -159,11 +159,10 @@ decide all properties claimed decidable.</li>
 <!-- ------ DVF ------------ -->
 <div class="fragment fade-left">
 <img src="assets/image/Darth-Vader-faith.jpg" alt="Darth Vader faith" style="width: 300px;float: right"/>
-</div>
 <li class="fragment"> It may seem strange to think of a proof  
 as a program, even stranger that there  
 can be different proofs of the same  
-result that differ in "efficiency."</li>
+result that differ in "efficiency."</li></div>
 </ul>
 
 ---
