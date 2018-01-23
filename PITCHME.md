@@ -54,10 +54,11 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 ## Type Theory vs. Set Theory
 <ul>
-<li>In <a style="color:#e7ad52">Type Theory</a> we are only allowed objects of a *given* type   
-*the type comes first*</li>
+<li>In <a style="color:#e7ad52">Type Theory</a> we are only allowed objects of a *given* type.   
+*The type comes first!*</li>
 
-<li class="fragment"> In <a style="color:green">Set Theory</a> all objects are there already and we can organize them into different sets; we might have an object $x$ and ask wether this object is a **nat** ($x\in \mathbb N$) or a **real** ($x \in \mathbb R$).</li>
+<li class="fragment"> In <a style="color:green">Set Theory</a> all objects are there already and we organize them into different sets, classify them, etc.  
+We might have an object $x$ and ask wether this object is a **nat** ($x\in \mathbb N$) or a **real** ($x \in \mathbb R$).</li>
 </ul>
 
 +++
@@ -65,13 +66,13 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 ## Type Theory vs. Set Theory
 <ul>
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> we think of $x : \mathbb{N}$ as
-  meaning that $x$ is a natural number *"by birth"*  </li>
+  meaning "$x$ is a natural number *by birth*"  </li>
 <li class="fragment">...we might go on to ask whether $x$ is also a real number.</li>
 <p>
-<li class="fragment"> We say <a style="color:#e7ad52">$x : \mathbb N$</a> is a ***judgement***</li>
+<li class="fragment"> We call <a style="color:#e7ad52">$x : \mathbb N$</a> a ***judgement***</li>
 <li class="fragment"> ...while <a style="color:green">$x \in \mathbb N$</a> is a ***proposition***.</li>
 </p>
-<li class="fragment"> These ideas become clearer and more natural after gaining some experience with Type Theory.</li>
+<li class="fragment"> These ideas become clearer and more natural after gaining some experience with Type Theory, and we reexamine these subtle distinctions later.</li>
 </ul>
 
 ---
@@ -99,19 +100,17 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 <!-- ------ JPS ------------ -->
 <!-- <img style="float:right" src="assets/image/jps.jpg" alt="Choices" style="width: 350px;float: right"/> -->
 
+<ul>
+<li class="fragment"> But to do math on a computer  
+  *we must make a choice!*</li>
 <!-- ------ DVF ------------ -->
 <div class="fragment fade-left">
 <img src="assets/image/jps.jpg"
 alt="Choices: JPS" style="float: right;width: 350px" />
 </div>
-<ul>
-<li class="fragment"> But to do math on a computer  
-  *we must make a choice!*</li>
 <li class="fragment"> A computer program must be  
   based on *some* formal system</li>
-
 <li class="fragment"> **ZFC** is not the obvious choice</li>
-
 <li class="fragment"> **constructive type theory**  
   can be justified on both philosophical and practical grounds</li>
   </ul>
