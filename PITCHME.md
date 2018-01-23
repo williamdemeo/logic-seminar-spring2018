@@ -111,8 +111,8 @@ alt="Choices: JPS" style="float: right;width: 350px" />
 <li class="fragment"> A computer program must be  
   based on *some* formal system.</li>
 <li class="fragment"> **ZFC** is not the obvious choice.</li>
-<li class="fragment"> **Constructive type theory**  
-can be justified on practical (and maybe philosophical) grounds.</li>
+<li class="fragment"> **Constructive type theory** can   
+be justified on practical (and maybe philosophical) grounds.</li>
   </ul>
 
 +++
@@ -168,13 +168,13 @@ result that differ in "efficiency."</li></div>
 ### A Change of Tack
 
 <ul>
-<li class="fragment"> Instead of discussing ways to formalize math, we might consider ways to extend programming languages, e.g. richer data types, new paradigms/techniques.</li>
+<li class="fragment"> Instead of dwelling on paradigms for formalizing math, consider ways to extend programming languages, e.g. richer data types, new paradigms/techniques.</li>
 
-<li class="fragment"> We will consider a high level functional language and see
+<li class="fragment"> We look at a functional language called Lean, and consider
 how it makes programming easier; some classical algorithms become easy or obvious;
 previously inconceivable programs are possible.</li>
 
-<li class="fragment"> We don't mention logic and math at first.</li>
+<li class="fragment"> We hold logical foundations in abeyance for the moment.</li>
 </ul>
 
 ---
@@ -182,7 +182,7 @@ previously inconceivable programs are possible.</li>
 ### Curry-Howard Correspondence
 
 <p class="fragment fade-left">
-Eventually, we see <a style="color:#e7ad52">*programs as proofs*</a>
+Eventually, we'll see <a style="color:#e7ad52">*programs as proofs*</a>
 of theorems and <a style="color:#e7ad52">**constructive math**</a>
 as a subsystem of the programming language.</p>
 
