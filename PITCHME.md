@@ -115,7 +115,7 @@ alt="Choices: JPS" style="float: right;width: 350px" />
   can be justified on both philosophical and practical grounds</li>
   </ul>
 
----
++++
 
 **Question:** Why do math on a computer?
 
@@ -129,7 +129,8 @@ alt="Choices: JPS" style="float: right;width: 350px" />
 <li class="fragment"> Because computers are really good at computing?
   <a style="color:#e7ad52">Yes!!</a></li>
 </ul>
----
+
++++
 
 <p class="fragment fade-left">
 Nobody would question the utility of computer programs on the grounds that we
@@ -147,7 +148,7 @@ be disputed on similar grounds.  But...
 </p>
 <p class="fragment fade-left"> ...or can they? </p>
 
----
++++
 
 <ul>
 <li class="fragment"> *Classical* proofs cannot always be executed, but *constructive* proofs can, in a sense.</li>
@@ -167,9 +168,7 @@ result that differ in "efficiency."</li></div>
 ### A Change of Tack
 
 <ul>
-<li class="fragment"> Instead of discussing ways to formalize math, let's consider
-ways to extend programming languages, e.g. richer data types,
-new paradigms/techniques.</li>
+<li class="fragment"> Instead of discussing ways to formalize math, we might consider ways to extend programming languages, e.g. richer data types, new paradigms/techniques.</li>
 
 <li class="fragment"> We will consider a high level functional language and see
 how it makes programming easier; some classical algorithms become easy or obvious;
@@ -177,6 +176,7 @@ previously inconceivable programs are possible.</li>
 
 <li class="fragment"> We don't mention logic and math at first.</li>
 </ul>
+
 ---
 
 ### Curry-Howard Correspondence
@@ -190,19 +190,9 @@ as a subsystem of the programming language.</p>
 <a style="color:#e7ad52">*programs are guaranteed correct*</a>   
 by virtue of the their inherent logical content!</p>
 
----
++++
 
-## End of Part 1
-
-(time for a break)
-
----
-
-# Part 2: Type Theory vs Set Theory
-
----
-
-## Sets vs Types
+## Sets vs Types: redux
 
 * In <a style="color:green">Set Theory</a>,
 	$3 \in \mathbb N$ means  
@@ -220,7 +210,7 @@ by virtue of the their inherent logical content!</p>
     <!--    has a unique type that is statically determined. It doesn't make sense to call   -->
     <!--    <a style="color:#e7ad52">$a : A$</a> a proposition. -->
 
----
++++
 
 ## Sets vs Types
 
@@ -235,6 +225,11 @@ by virtue of the their inherent logical content!</p>
 <!--   programming languages. While in dynamically typed languages there are -->
 <!--   runtime functions to check the type of an object this doesn't make sense -->
 <!--   in statically typed languages. -->
+
++++
+
+## Sets vs Types
+
 * In <a style="color:green">Set Theory</a> we define $P \subseteq Q$ as $\forall x . x \in P \to x \in Q$.  
   This doesn't work in <a style="color:#e7ad52">Type Theory</a> since $x \in P$ is not a proposition.
 
@@ -245,6 +240,10 @@ by virtue of the their inherent logical content!</p>
 
 ---
 
++++
+
+## Sets vs Types
+
 * <a style="color:#e7ad52">Type Theory</a> is **extensional** in the sense that we
   can't talk about details of encodings.
 
@@ -253,6 +252,10 @@ by virtue of the their inherent logical content!</p>
   Or whether <a style="color:green">$2 \in 3$</a>.
   The answer to these questions depends on  
   the choice of representation of the objects and sets involved.
+
++++
+
+## Sets vs Types
 
 * In addition to the judgment <a style="color:#e7ad52">$a : A$</a>, we introduce the
   judgment <a style="color:#e7ad52">$a \equiv_A b$</a> which means <a style="color:#e7ad52">$a$</a>
