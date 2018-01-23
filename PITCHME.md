@@ -100,12 +100,12 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 <ul>
 <li class="fragment"> But to do math on a computer  
-  *we must make a choice!*</li>
+  *we must make a choice!*
 <!-- ------ DVF ------------ -->
 <div class="fragment fade-left">
 <img src="assets/image/jps.jpg"
 alt="Choices: JPS" style="float: right;width: 300px" />
-</div>
+</div></li>
 <li class="fragment"> A computer program must be  
   based on *some* formal system</li>
 
