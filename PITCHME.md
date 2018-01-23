@@ -168,13 +168,15 @@ result that differ in "efficiency."</li></div>
 ### A Change of Tack
 
 <ul>
+<p>
 <li class="fragment"> Instead of dwelling on paradigms for formalizing math, consider ways to extend programming languages, e.g. richer data types, new paradigms/techniques.</li>
-
+</p><p>
 <li class="fragment"> We will look at a functional language called <a style="color:purple">Lean</a>, and consider
 how it makes programming easier; some classical algorithms become easy or obvious;
 previously inconceivable programs are possible.</li>
-
+</p><p>
 <li class="fragment"> We hold logical foundations in abeyance for the moment.</li>
+</p>
 </ul>
 
 ---
@@ -194,40 +196,40 @@ by virtue of the their inherent logical content!</p>
 
 ## Sets vs Types: redux
 <ul>
+<p>
 <li class="fragment"> In <a style="color:green">Set Theory</a>,
 	$3 \in \mathbb N$ means  
 	"3 is an element of the <a style="color:green">set</a> of natural numbers"</li>
-
+</p><p>
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a>,
 	$3 : \mathbb N$ means  
 	"3 is an element of the <a style="color:#e7ad52">type</a> of natural numbers"</li>
+<p>
+<li class="fragment"> Seems trivial, but recall the significance...</li>
+</p><p>
+<li class="fragment"> While  <a style="color:green">$3 \in \mathbb N$</a> is a *proposition*, we think of
+<a style="color:#e7ad52">$3 : \mathbb N$</a> as a ***judgment***   
+a piece of static information.</li>
+</p>
 
-<li class="fragment"> Seems trivial... but here's the significance...</li>
 </ul>
-    <!-- 1. $3 \in \mathbb N$ is a <a style="color:green">proposition</a>  -->
-    <!-- 2. $3 : \mathbb N$ is a <a style="color:#e7ad52">judgment</a>, ie a piece  -->
-    <!--    of <em>static information</em> -->
-    <!-- 3. In <a style="color:#e7ad52">Type Theory</a> every object and expression  -->
-    <!--    has a unique type that is statically determined. It doesn't make sense to call   -->
-    <!--    <a style="color:#e7ad52">$a : A$</a> a proposition. -->
 
 +++
 
 ## Sets vs Types
 
 <ul>
-<li class="fragment"> While  <a style="color:green">$3 \in \mathbb N$</a> is a proposition,  <a style="color:#e7ad52">$3 : \mathbb N$</a> is a *judgment*; ie a piece of static information.</li>
-
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> every object and every expression has a (unique) type
   which is statically determined.</li>
 
 <li class="fragment"> Hence it doesn't make sense to use <a style="color:#e7ad52">$a : A$</a> as a proposition.</li>
+
+<li class="fragment"> This is similar to the distinction between statically and dynamically typed
+   programming languages. While in dynamically typed languages there are
+   runtime functions to check the type of an object this doesn't make sense
+   in statically typed languages.</li>
 </ul>
 
-<!-- <li class="fragment"> This is similar to the distinction between statically and dynamically typed -->
-<!--   programming languages. While in dynamically typed languages there are -->
-<!--   runtime functions to check the type of an object this doesn't make sense -->
-<!--   in statically typed languages. -->
 
 +++
 
