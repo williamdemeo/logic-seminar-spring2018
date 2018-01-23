@@ -141,8 +141,8 @@ be justified on practical (and maybe philosophical) grounds.</li>
 +++
 
 <p class="fragment">
-No one questions the utility of computer programs on the grounds that we
-it's easier and faster to write programs in pseudo-code on paper.</p>
+No one questions the utility of computer programs on the grounds that
+it's easier to handwrite programs on paper in pseudo-code.</p>
 
 <p class="fragment fade-left">
 <a style="color:#e7ad52">*programs written on paper cannot be executed*</a>
