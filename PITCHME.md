@@ -34,9 +34,11 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 ---
 
-# What is Type Theory?
+# Type Theory
 
-## the basic idea
++++
+
+### the basic idea
 
 <ul>
 <li class="fragment"> Organize mathematical objects into <a style="color:#e7ad52">**Types**</a> instead of <a style="color:green">**Sets**</a> eg, the <a style="color:#e7ad52">**Type** $\mathbb N$</a> of natural numbers, the <a style="color:#e7ad52">**Type** $\mathbb R$</a> of reals, etc.</li>
@@ -48,7 +50,7 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 <li class="fragment"> No, of course not.</li>
 </ul>
 
----
++++
 
 ## Type Theory vs. Set Theory
 <ul>
@@ -57,25 +59,25 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 <li class="fragment"> In <a style="color:green">Set Theory</a> all objects are there already and we can organize them into different sets; we might have an object $x$ and ask wether this object is a **nat** ($x\in \mathbb N$) or a **real** ($x \in \mathbb R$).</li>
 </ul>
 
----
++++
 
 ## Type Theory vs. Set Theory
 <ul>
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> we think of $x : \mathbb{N}$ as
   meaning that $x$ is a natural number *"by birth"*  </li>
-<li class="fragment">...we might go on to ask whether $x$ is also a real number</li>
+<li class="fragment">...we might go on to ask whether $x$ is also a real number.</li>
 <p>
 <li class="fragment"> We say <a style="color:#e7ad52">$x : \mathbb N$</a> is a ***judgement***</li>
-<li class="fragment"> ...while <a style="color:green">$x \in \mathbb N$</a> is a ***proposition***</li>
+<li class="fragment"> ...while <a style="color:green">$x \in \mathbb N$</a> is a ***proposition***.</li>
 </p>
-<li class="fragment"> These ideas become clearer and more natural once we gain some experience with Type Theory.</li>
+<li class="fragment"> These ideas become clearer and more natural after gaining some experience with Type Theory.</li>
 </ul>
 
 ---
 
 # Constructive Math
 
----
++++
 <ul>
 <li class="fragment"> What is a good language for writing proofs?</li>
 
@@ -90,10 +92,12 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 <li class="fragment"> In fact, we don't need to commit, as long as our proofs use
   standard techniques that we believe are formalizable in *some* system.</li>
 </ul>
----
+
++++
 
 <!-- ------ JPS ------------ -->
-<img src="assets/image/jps.jpg" alt="Choices" style="width: 350px;float: right"/>
+<img style="float: right width="200" src="assets/image/jps.jpg">
+<!-- <img style="float:right"src="assets/image/jps.jpg" alt="Choices" style="width: 350px;float: right"/> -->
 
 <ul>
 <li class="fragment"> But to do math on a computer  
