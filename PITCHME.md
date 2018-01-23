@@ -324,19 +324,25 @@ disjoint union +, product ×, and → (function) types are familiar
 <li class="fragment"> It turns out that a Type Theory with <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a> does
   exhibit **Russell's paradox**.</li>
 
-<li class="fragment"> Construct the tree <a style="color:#e7ad52">$T : \mathsf{Tree}$</a> of all trees
+<li class="fragment"> (Example: construct the tree <a style="color:#e7ad52">$T : \mathsf{Tree}$</a> of all trees
   that don't have themselves as immediate subtrees. Then <a style="color:#e7ad52">$T$</a>
-  is a subtree of itself iff it isn't.</li>
+  is a subtree of itself iff it isn't.)</li>
 
 <li class="fragment"> To avoid this, we introduce a hierarchy of universes  
 
 
   <a style="color:#e7ad52">
   $\mathsf{Type}_0 : \mathsf{Type}_1 : \mathsf{Type}_2 : \cdots$
-  </a>  
+  </a>    
 
-  and we decree that any <a style="color:#e7ad52">$A : \mathsf{Type}_i$</a>
-  can be *lifted* to <a style="color:#e7ad52">$A^+ : \mathsf{Type}_{i+1}$</a></li>
+
+  and we decree that any
+  <a style="color:#e7ad52">
+  $A : \mathsf{Type}_i$</a>
+  can be *lifted* to
+  <a style="color:#e7ad52">
+  $A^+ : \mathsf{Type}_{i+1}$
+  </a></li>
 
 <li class="fragment"> Being explicit about universe levels can be quite annoying.  
   In notation we ignore the levels, but take care to avoid using universes in a cyclic way.</li>
