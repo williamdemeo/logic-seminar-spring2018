@@ -165,7 +165,7 @@ be disputed on similar grounds.
 <p class="fragment fade-left">
 But...  
 
-<a style="color:#e7ad52">*proofs of math theorems cannot be executed!*</a>  
+<a style="color:#e7ad52">*Proofs of math theorems cannot be executed!*</a>  
 </p>
 <p class="fragment"> ...or can they? </p>
 
@@ -368,7 +368,7 @@ disjoint union +, product ×, and → (function) types are familiar
 <li class="fragment"> It turns out a Type Theory with <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a> does
   exhibit **Russell's paradox**.</li>
 
-<li class="fragment"> (Example: construct the tree <a style="color:#e7ad52">$T : \mathsf{Tree}$</a> of all trees
+<li class="fragment"> (**Example:** construct the tree <a style="color:#e7ad52">$T : \mathsf{Tree}$</a> of all trees
   that don't have themselves as immediate subtrees. Then <a style="color:#e7ad52">$T$</a>
   is a subtree of itself iff it isn't.)</li>
 
@@ -448,7 +448,7 @@ try to save parentheses and write $f x :\equiv x + 3$
 and $f 2$
 </li>
 <li class="fragment"> The explicit definition of a function requires a name but we want
-**anonymous functions** as well---this is the justification for the  
+**anonymous functions** as well---this is one justification for the  
 <a style="color:#e7ad52">λ-notation</a>
 </li>
 <li class="fragment"> We write $\lambda x.x + 3 : \mathbb{N} \to \mathbb{N}$
