@@ -321,7 +321,7 @@ disjoint union +, product ×, and → (function) types are familiar
 +++
 
 <ul>
-<li class="fragment"> It turns out that a Type Theory with <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a> does
+<li class="fragment"> It turns out a Type Theory with <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a> does
   exhibit **Russell's paradox**.</li>
 
 <li class="fragment"> (Example: construct the tree <a style="color:#e7ad52">$T : \mathsf{Tree}$</a> of all trees
@@ -347,59 +347,61 @@ $\mathsf{Type}_i$ and assume that all levels act the same unless stated otherwis
 
 +++
 
-## Functions
+### Functions
 
 <li class="fragment"> In <a style="color:green">Set Theory</a> **function** is a derived concept
-  (a subset of the cartesian product with certain properties)
+  (a subset of the cartesian product with certain properties)</li>
 
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> **function** is a primitive concept.
-
+</li>
 <li class="fragment"> The basic idea is the same as in functional programming: a
   function is a **black box**; you feed it elements from its domain and out come
-  elements of its codomain.
+  elements of its codomain.</li>
 
 <li class="fragment"> Hence given $A, B : \mathsf{Type}$ we introduce the type of
   functions   
 
   $A \to B : \mathsf{Type}$
-
+</li>
 <li class="fragment"> We can define a function
   $f : \mathbb{N} \to \mathbb{N}$
   explicitly, eg, $f (x) :\equiv x <li class="fragment"> 3$.
-
+</li>
 <li class="fragment"> We can now apply, $f (2) : \mathbb{N}$, and
   evaluate this application by replacing all
   $x$'s in the body with 2; hence $f (2) \equiv 2 + 3$
-
+</li>
 <li class="fragment"> If we know how to calculate $2 + 3$ we can conclude $f (2) \equiv 5$
+</li>
 
 +++
 
-## A word about syntax
+### A word about syntax
 
-- In Type Theory, as in functional programming, we usually
+<li class="fragment"> In Type Theory, as in functional programming, we usually
 try to save parentheses and write $f x :\equiv x + 3$
 and $f 2$
-
-- The explicit definition of a function requires a name but we want
+</li>
+<li class="fragment"> The explicit definition of a function requires a name but we want
 **anonymous functions** as well---this is the justification for the  
 <a style="color:#e7ad52">λ-notation</a>
-
-- We write $\lambda x.x + 3 : \mathbb{N} \to \mathbb{N}$
+</li>
+<li class="fragment"> We write $\lambda x.x + 3 : \mathbb{N} \to \mathbb{N}$
 to avoid naming the function.
-
-- We can apply: $(\lambda x . x + 3)(2)$
-
-- The equivalence
+</li>
+<li class="fragment"> We can apply: $(\lambda x . x + 3)(2)$
+</li>
+<li class="fragment"> The equivalence
 $(\lambda x . x + 3)(2) \equiv 2 + 3$
 is called <a style="color:#e7ad52">β-reduction</a>
-
-- The explicit definition $f x \equiv x + 3$ can now be understood
+</li>
+<li class="fragment">  The explicit definition $f x \equiv x + 3$ can now be understood
 as a shorthand for $f \equiv \lambda x . x + 3$.
+</li>
+</ul>
++++
 
----
-
-## Products and sums
+### Products and sums
 
 <li class="fragment"> Given $A, B : \mathsf{Type}$ we can form
     - their product <a style="color:#e7ad52">$A \times B : \mathsf{Type}$</a>
