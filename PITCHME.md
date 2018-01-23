@@ -1,28 +1,28 @@
-# Type Theory Crash Course
+# Brief Introduction to Type Theory and Lambda Calculus
 
-## based on [Thorsten Altenkirch's notes](http://www.cs.nott.ac.uk/~psztxa/ewscs-17/notes.pdf)
+### based on
++ [Paul Levy's notes on lambda calculus](http://www.cs.bham.ac.uk/~pbl/mgsall.pdf)
++ [Thorsten Altenkirch's notes on type theory](http://www.cs.nott.ac.uk/~psztxa/ewscs-17/notes.pdf)
 
-### lectures/slides by William DeMeo [&lt;williamdemeo@gmail.com&gt;](mailto:williamdemeo@gmail.com)  
+#### lectures/slides by William DeMeo [&lt;williamdemeo@gmail.com&gt;](mailto:williamdemeo@gmail.com)  
 
-### CU Boulder Logic Seminar, 23 Jan 2018  
+#### CU Boulder Logic Seminar, 23 Jan 2018  
 
 +++
 
 ## References
 
-The material we cover here is based on the following:
-
 + Altenkirch (2016) [Naive Type Theory short course](http://www.cs.nott.ac.uk/~psztxa/ntt/)  
   www.cs.nott.ac.uk/~psztxa/ntt/
+
++ Levy (2014) [Typed Lambda Calculus](http://www.cs.bham.ac.uk/~pbl/mgs2014lam.html)  
+www.cs.bham.ac.uk/~pbl/mgs2014lam.html
 
 + Capretta (2002) [Abstraction and Computation, PhD thesis](http://www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf)  
 www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 + Harper (2013) [CMU course on HoTT](http://www.cs.cmu.edu/~rwh/courses/hott/)  
-  www.cs.cmu.edu/~rwh/courses/hott/
-
-+ Pfenning (2009) [Lecture notes on natural deduction](http://www.cs.cmu.edu/~fp/courses/15317-f09/lectures/02-natded.pdf)  
-  www.cs.cmu.edu/~fp/courses/15317-f09/lectures/02-natded.pdf
+www.cs.cmu.edu/~rwh/courses/hott/
 
 ---
 
@@ -32,221 +32,37 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 ## Two Iterpretations
 
-+ <a style="color:#e7ad52">**Type Theory** (TT)</a> (with caps) is an alternative foundation for Mathematics---an alternative to Set Theory (ST) |
-+ pioneered by Swedish mathematician <a style="color:#e7ad52">**Per Martin-Löf**</a> |
-+ <a style="color:#e7ad52">**type theory** (tt)</a> (w/out caps) is the theory of types in programming languages |
-+ <a style="color:#e7ad52">TT</a> and <a style="color:#e7ad52">tt</a> are related but different subjects|
+<ul>
+<li class="fragment">
+<a style="color:#e7ad52">**Type Theory** (TT)</a> (with caps) is an alternative foundation for Mathematics---an alternative to Set Theory (ST) </li>
+<li class="fragment">pioneered by Swedish mathematician <a style="color:#e7ad52">**Per Martin-Löf**</a></li>
+<li class="fragment"><a style="color:#e7ad52">**type theory** (tt)</a> (w/out caps) is the theory of types in programming languages </li>
+<li class="fragment"><a style="color:#e7ad52">TT</a> and <a style="color:#e7ad52">tt</a> are related but different subjects</li>
+</ul>
 
 ---
 
 ## Type Theory: the basic idea
 
-+ organize mathematical objects into <a style="color:#e7ad52">**Types**</a> instead of <a style="color:green">**Sets**</a> eg, the <a style="color:#e7ad52">**Type** $\mathbb N$</a> of natural numbers, the <a style="color:#e7ad52">**Type** $\mathbb R$</a> of reals, etc |
-+ to say that $\pi$ is real, write <a style="color:#e7ad52">$\pi : \mathbb R$</a> |
-+ *Wait a minute!* <a style="color:#e7ad52">Type Theory</a> is merely <a style="color:green">Set Theory</a> with the word <a style="color:green">Set</a> replaced by <a style="color:#e7ad52">Type</a> and the symbol <a style="color:green">$\in$</a> replaced by <a style="color:#e7ad52">$:$</a> ?? |
-+ Of course not.  In <a style="color:#e7ad52">Type Theory</a> we can only make objects of a certain type---*the type comes first*---and then we can construct elements of that type.|
-+ In <a style="color:green">Set Theory</a> all objects are there already and we can organize them into different sets; we might have an object $x$ and ask wether this object is a **nat** ($x\in \mathbb N$) or a **real** ($x \in \mathbb R$).|
-
----
-
-<table width=50%>
-<tr>
-<th rowspan="2">Name</th>
-<th rowspan="2">Latest version</th>
-<th rowspan="2">Developer(s)</th>
-<th rowspan="2">Implementation language</th>
-<th colspan="6">Features</th>
-</tr>
-<tr>
-<th><a href="/wiki/Higher-order_logic" title="Higher-order logic">Higher-order logic</a></th>
-<th><a href="/wiki/Dependent_type" title="Dependent type">Dependent types</a></th>
-<th><a href="/w/index.php?title=De_Bruijn_criterion&amp;action=edit&amp;redlink=1" class="new" title="De Bruijn criterion (page does not exist)">Small kernel</a></th>
-<th><a href="/w/index.php?title=Proof_automation&amp;action=edit&amp;redlink=1" class="new" title="Proof automation (page does not exist)">Proof automation</a></th>
-<th><a href="/w/index.php?title=Proof_by_reflection&amp;action=edit&amp;redlink=1" class="new" title="Proof by reflection (page does not exist)">Proof by reflection</a></th>
-<th><a href="/wiki/Code_generation_(compiler)" title="Code generation (compiler)">Code generation</a></th>
-</tr>
-<tr>
-<td><a href="/wiki/ACL2" title="ACL2">ACL2</a></td>
-<td>7.1</td>
-<td><a href="/wiki/Matt_Kaufmann" title="Matt Kaufmann">Matt Kaufmann</a> and <a href="/wiki/J_Strother_Moore" title="J Strother Moore">J Strother Moore</a></td>
-<td><a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">Untyped</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></td>
-<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">Already executable</td>
-</tr>
-<tr>
-<td><a href="/wiki/Agda_(programming_language)" title="Agda (programming language)">Agda</a></td>
-<td>2.5.1.1</td>
-<td>Ulf Norell, Nils Anders Danielsson, and Andreas Abel (<a href="/wiki/Chalmers_University_of_Technology" title="Chalmers University of Technology">Chalmers</a> and <a href="/wiki/Gothenburg_University" class="mw-redirect" title="Gothenburg University">Gothenburg</a>)</td>
-<td><a href="/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a></td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#FFB;vertical-align:middle;text-align:center;" class="table-partial">Partial</td>
-<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">Already executable</td>
-</tr>
-<tr>
-<td><a href="/wiki/Albatross_(programming_language)" title="Albatross (programming language)">Albatross</a></td>
-<td>0.4</td>
-<td>Helmut Brandl</td>
-<td><a href="/wiki/OCaml" title="OCaml">OCaml</a></td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">Unknown</td>
-<td>not yet implemented</td>
-</tr>
-<tr>
-<td><a href="/wiki/Coq" title="Coq">Coq</a></td>
-<td>8.6.1</td>
-<td><a href="/wiki/INRIA" class="mw-redirect" title="INRIA">INRIA</a></td>
-<td><a href="/wiki/OCaml" title="OCaml">OCaml</a></td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-</tr>
-<tr>
-<td><a href="/wiki/F*_(programming_language)" title="F* (programming language)">F*</a></td>
-<td>repository</td>
-<td><a href="/wiki/Microsoft_Research" title="Microsoft Research">Microsoft Research</a> and <a href="/wiki/INRIA" class="mw-redirect" title="INRIA">INRIA</a></td>
-<td><a href="/wiki/F*_(programming_language)" title="F* (programming language)">F*</a></td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">Unknown</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-</tr>
-<tr>
-<td><a rel="nofollow" class="external text" href="https://leanprover.github.io/">Lean</a></td>
-<td>repository</td>
-<td><a href="/wiki/Microsoft_Research" title="Microsoft Research">Microsoft Research</a></td>
-<td>C++</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">Unknown</td>
-</tr>
-<tr>
-<td><a href="/wiki/HOL_Light" title="HOL Light">HOL Light</a></td>
-<td>repository</td>
-<td>John Harrison</td>
-<td><a href="/wiki/OCaml" title="OCaml">OCaml</a></td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-</tr>
-<tr>
-<td><a href="/wiki/HOL4" class="mw-redirect" title="HOL4">HOL4</a></td>
-<td>Kananaskis-8 (or repo)</td>
-<td>Michael Norrish, Konrad Slind, and others</td>
-<td><a href="/wiki/Standard_ML" title="Standard ML">Standard ML</a></td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-</tr>
-<tr>
-<td><a href="/wiki/Isabelle_(proof_assistant)" title="Isabelle (proof assistant)">Isabelle</a></td>
-<td>2016</td>
-<td><a href="/wiki/Larry_Paulson" class="mw-redirect" title="Larry Paulson">Larry Paulson</a> (<a href="/wiki/University_of_Cambridge" title="University of Cambridge">Cambridge</a>), <a href="/wiki/Tobias_Nipkow" title="Tobias Nipkow">Tobias Nipkow</a> (<a href="/wiki/Technische_Universit%C3%A4t_M%C3%BCnchen" class="mw-redirect" title="Technische Universität München">München</a>) and <a href="/w/index.php?title=Makarius_Wenzel&amp;action=edit&amp;redlink=1" class="new" title="Makarius Wenzel (page does not exist)">Makarius Wenzel</a> (<a href="/wiki/Universit%C3%A9_Paris-Sud" class="mw-redirect" title="Université Paris-Sud">Paris-Sud</a>)</td>
-<td><a href="/wiki/Standard_ML" title="Standard ML">Standard ML</a>, <a href="/wiki/Scala_(programming_language)" title="Scala (programming language)">Scala</a></td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-</tr>
-<tr>
-<td><a href="/wiki/LEGO_(proof_assistant)" title="LEGO (proof assistant)">LEGO (not affiliated with the LEGO company)</a></td>
-<td>1.3.1</td>
-<td><a href="/w/index.php?title=Randy_Pollack&amp;action=edit&amp;redlink=1" class="new" title="Randy Pollack (page does not exist)">Randy Pollack</a> (<a href="/wiki/University_of_Edinburgh" title="University of Edinburgh">Edinburgh</a>)</td>
-<td><a href="/wiki/Standard_ML" title="Standard ML">Standard ML</a></td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-</tr>
-<tr>
-<td><a href="/wiki/Mizar_system" title="Mizar system">Mizar</a></td>
-<td>8.1.05</td>
-<td><a href="/wiki/Bia%C5%82ystok_University" class="mw-redirect" title="Białystok University">Białystok University</a></td>
-<td><a href="/wiki/Free_Pascal" title="Free Pascal">Free Pascal</a></td>
-<td style="background:#FFB;vertical-align:middle;text-align:center;" class="table-partial">Partial</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-</tr>
-<tr>
-<td><a href="/wiki/NuPRL" class="mw-redirect" title="NuPRL">NuPRL</a></td>
-<td>5</td>
-<td><a href="/wiki/Cornell_University" title="Cornell University">Cornell University</a></td>
-<td><a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">Unknown</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-</tr>
-<tr>
-<td><a href="/wiki/Prototype_Verification_System" title="Prototype Verification System">PVS</a></td>
-<td>5.0</td>
-<td><a href="/wiki/SRI_International" title="SRI International">SRI International</a></td>
-<td><a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">Unknown</td>
-</tr>
-<tr>
-<td><a href="/wiki/Twelf" title="Twelf">Twelf</a></td>
-<td>1.7.1</td>
-<td><a href="/wiki/Frank_Pfenning" title="Frank Pfenning">Frank Pfenning</a> and <a href="/w/index.php?title=Carsten_Sch%C3%BCrmann&amp;action=edit&amp;redlink=1" class="new" title="Carsten Schürmann (page does not exist)">Carsten Schürmann</a></td>
-<td><a href="/wiki/Standard_ML" title="Standard ML">Standard ML</a></td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
-<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">Unknown</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
-<td style="background: #ececec; color: #2C2C2C; font-size: smaller; vertical-align: middle; text-align: center;" class="unknown table-unknown">Unknown</td>
-</tr>
-</table>
-
+<ul>
+<li class="fragment"> organize mathematical objects into <a style="color:#e7ad52">**Types**</a> instead of <a style="color:green">**Sets**</a> eg, the <a style="color:#e7ad52">**Type** $\mathbb N$</a> of natural numbers, the <a style="color:#e7ad52">**Type** $\mathbb R$</a> of reals, etc</li>
+<li class="fragment"> to say that $\pi$ is real, write <a style="color:#e7ad52">$\pi : \mathbb R$</a></li>
+<li class="fragment"> *Wait a minute!* <a style="color:#e7ad52">Type Theory</a> is merely <a style="color:green">Set Theory</a> with the word <a style="color:green">Set</a> replaced by <a style="color:#e7ad52">Type</a> and the symbol <a style="color:green">$\in$</a> replaced by <a style="color:#e7ad52">$:$</a> ??</li>
+<li class="fragment"> No.  In <a style="color:#e7ad52">Type Theory</a> we can only make objects of a certain type---*the type comes first*---and then we can construct elements of that type.</li>
+<li class="fragment"> In <a style="color:green">Set Theory</a> all objects are there already and we can organize them into different sets; we might have an object $x$ and ask wether this object is a **nat** ($x\in \mathbb N$) or a **real** ($x \in \mathbb R$).</li>
+</ul>
 ---
 
 ## Type Theory vs. Set Theory
+<ul>
+<li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> we think of $x : \mathbb{N}$ as
+  meaning that $x$ is a natural number "by birth" and we can ask whether $x$ is a real number.</li>
 
-+ In <a style="color:#e7ad52">Type Theory</a> we think of <a style="color:#e7ad52">$x : \mathbb N$</a> as
-  meaning that $x$ is a natural number "by birth" and we can ask whether $x$ is a real number.
+<li class="fragment"> We say <a style="color:#e7ad52">$x : \mathbb N$</a> is a **judgement** while
+  <a style="color:green">$x \in \mathbb N$</a> is a **proposition**</li>
 
-+ We say <a style="color:#e7ad52">$x : \mathbb N$</a> is a **judgement** while
-  <a style="color:green">$x \in \mathbb N$</a> is a **proposition**
-
-+ We will revisit these ideas again and again, and they will become clearer once we gain some experience with Type Theory.
-
+<li class="fragment"> We will revisit these ideas again and again, and they will become clearer once we gain some experience with Type Theory.</li>
+</ul>
 ---
 
 ## End of Part 0
@@ -256,50 +72,52 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 # Part 1: Constructive Math
 
 ---
+<ul>
+<li class="fragment"> What is a good language for writing proofs?</li>
 
-+ What is a good language for writing proofs?
+<li class="fragment"> What kind of math do we want to do?</li>
 
-+ What kind of math do we want to do?
+<li class="fragment"> In principle all math can be formalized in ZFC.</li>
 
-+ In principle all math can be formalized in ZFC.
-
-+ Usually a much weaker theory is sufficient  
+<li class="fragment"> Usually a much weaker theory is sufficient  
   (PA suffices for much of Number Theory)   
-  (Analysis can be formalized in PA2)
+  (Analysis can be formalized in PA2)</li>
 
-+ In fact, we don't need to commit, as long as our proofs use
-  standard techniques that we believe are formalizable in *some* system.
-
+<li class="fragment"> In fact, we don't need to commit, as long as our proofs use
+  standard techniques that we believe are formalizable in *some* system.</li>
+</ul>
 ---
 
 <!-- ------ JPS ------------ -->
-<img src="assets/image/jps.jpg" alt="Choices" style="width: 350px;float: right"/>
+<img src="./assets/md/assets/jps.jpg" alt="Choices" style="width: 350px;float: right"/>
 
-+ But to do math on a computer  
-  *we must make a choice!*
+<ul>
+<li class="fragment"> But to do math on a computer  
+  *we must make a choice!*</li>
 
-+ A computer program must be  
-  based on *some* formal system
+<li class="fragment"> A computer program must be  
+  based on *some* formal system</li>
 
-+ **ZFC** is not the obvious choice
+<li class="fragment"> **ZFC** is not the obvious choice</li>
 
-+ **constructive type theory**  
-  can be justified on both  
-  philosophical   and practical grounds
+<li class="fragment"> **constructive type theory**  
+  can be justified on both philosophical and practical grounds</li>
+  </ul>
 
 ---
 
 **Question:** Why do math on a computer?
 
-+ Because computers can check whether proofs are correct?
-  <a style="color:#e7ad52">No, the peer review process works.</a>
+<ul>
+<li class="fragment"> Because computers can check whether proofs are correct?
+  <a style="color:#e7ad52">No, the peer review process works.</a></li>
 
-+ Because computers can prove many things humans can't?
-  <a style="color:#e7ad52">No, at least not anytime soon.</a>
+<li class="fragment"> Because computers can prove many things humans can't?
+  <a style="color:#e7ad52">No, at least not anytime soon.</a></li>
 
-+ Because computers are really good at computing?
-  <a style="color:#e7ad52">Yes!!</a>
-
+<li class="fragment"> Because computers are really good at computing?
+  <a style="color:#e7ad52">Yes!!</a></li>
+</ul>
 ---
 
 <p class="fragment fade-left">
@@ -320,35 +138,38 @@ be disputed on similar grounds.  But...
 
 ---
 
-+ *Classical* proofs cannot always be executed,   
-but *constructive* proofs can, in a sense.
+<ul>
+<li class="fragment"> *Classical* proofs cannot always be executed,   
+but *constructive* proofs can, in a sense.</li>
 
-+ Constructive proofs give algorithms to  
+<li class="fragment"> Constructive proofs give algorithms to  
 compute all objects claimed to exist and  
-decide all properties claimed decidable.
+decide all properties claimed decidable.</li>
 <!-- ------ DVF ------------ -->
 <div class="fragment fade-left">
-<img src="assets/image/Darth-Vader-faith.jpg" alt="Darth Vader faith" style="width: 300px;float: right"/>
+<img src="./assets/md/assets/Darth-Vader-faith.jpg" alt="Darth Vader faith" style="width: 300px;float: right"/>
 </div>
-+ It may seem strange to think of a proof  
+<li class="fragment"> It may seem strange to think of a proof  
 as a program, even stranger that there  
 can be different proofs of the same  
-result that differ in "efficiency."
+result that differ in "efficiency."</li>
+</ul>
 
 ---
 
 ### A Change of Tack
 
-+ Instead of discussing ways to formalize math, let's consider
+<ul>
+<li class="fragment"> Instead of discussing ways to formalize math, let's consider
 ways to extend programming languages, e.g. richer data types,
-new paradigms/techniques.
+new paradigms/techniques.</li>
 
-+ We will consider a high level functional language and see
+<li class="fragment"> We will consider a high level functional language and see
 how it makes programming easier; some classical algorithms become easy or obvious;
-previously inconceivable programs are possible.
+previously inconceivable programs are possible.</li>
 
-+ We don't mention logic and math at first.
-
+<li class="fragment"> We don't mention logic and math at first.</li>
+</ul>
 ---
 
 ### Curry-Howard Correspondence
@@ -495,28 +316,28 @@ disjoint union +, product ×, and → (function) types are familiar
 
 ## Universes
 
-+ To get started we have to say what a *type* is. We could introduce another judgement, but
+<li class="fragment"> To get started we have to say what a *type* is. We could introduce another judgement, but
   instead we'll use **universes.**
 
-+ A **universe** is a type of types. For example, to say that $\mathbb N$ is a type,
+<li class="fragment"> A **universe** is a type of types. For example, to say that $\mathbb N$ is a type,
   we write <a style="color:#e7ad52">$\mathbb N : \mathsf{Type}$</a>, where
   <a style="color:#e7ad52">$\mathsf{Type}$</a> is a universe.
 
-+ But what is the type of <a style="color:#e7ad52">$\mathsf{Type}$</a>? Do we have
+<li class="fragment"> But what is the type of <a style="color:#e7ad52">$\mathsf{Type}$</a>? Do we have
   <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a>?
 
-+ This doesn't work in   <a style="color:green">Set Theory</a> due to **Russell's paradox**  
+<li class="fragment"> This doesn't work in   <a style="color:green">Set Theory</a> due to **Russell's paradox**  
   (consider the set of all sets that don't contain themselves)
 
-+ In Type Theory <a style="color:#e7ad52">$a : A$</a> is not a Prop, hence it's not immediately clear wether
+<li class="fragment"> In Type Theory <a style="color:#e7ad52">$a : A$</a> is not a Prop, hence it's not immediately clear wether
   the paradox still occurs.
 
 ---
 
-+ It turns out that a Type Theory with <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a> does
+<li class="fragment"> It turns out that a Type Theory with <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a> does
   exhibit **Russell's paradox**.
 
-+ Construct the tree <a style="color:#e7ad52">$T : \mathsf{Tree}$</a> of all trees
+<li class="fragment"> Construct the tree <a style="color:#e7ad52">$T : \mathsf{Tree}$</a> of all trees
   that don't have themselves as immediate subtrees. Then <a style="color:#e7ad52">$T$</a>
   is a subtree of itself iff it isn't.
 
@@ -527,10 +348,10 @@ disjoint union +, product ×, and → (function) types are familiar
   and we decree that any <a style="color:#e7ad52">$A : \mathsf{Type}_i$</a>
   can be *lifted* to <a style="color:#e7ad52">$A^+ : \mathsf{Type}_{i+1}$</a>
 
-+ Being explicit about universe levels can be quite annoying.  
+<li class="fragment"> Being explicit about universe levels can be quite annoying.  
   In notation we ignore the levels, but take care to avoid using universes in a cyclic way.
 
-+ That is we write <a style="color:#e7ad52">$\mathsf{Type}$</a> as a metavariable for
+<li class="fragment"> That is we write <a style="color:#e7ad52">$\mathsf{Type}$</a> as a metavariable for
   <a style="color:#e7ad52">$\mathsf{Type}_i$</a> and assume that all levels
   act the same unless stated otherwise.
 
@@ -538,27 +359,27 @@ disjoint union +, product ×, and → (function) types are familiar
 
 ## Functions
 
-+ In <a style="color:green">Set Theory</a> **function** is a derived concept
+<li class="fragment"> In <a style="color:green">Set Theory</a> **function** is a derived concept
   (a subset of the cartesian product with certain properties)
 
-+ In <a style="color:#e7ad52">Type Theory</a> **function** is a primitive concept.
+<li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> **function** is a primitive concept.
 
-+ The basic idea is the same as in functional programming: a
+<li class="fragment"> The basic idea is the same as in functional programming: a
   function is a **black box**; you feed it elements from its domain and out come
   elements of its codomain.
 
-+ Hence given $A, B : \mathsf{Type}$ we introduce the type of
+<li class="fragment"> Hence given $A, B : \mathsf{Type}$ we introduce the type of
   functions $$A \to B : \mathsf{Type}$$
 
-+ We can define a function
+<li class="fragment"> We can define a function
   $f : \mathbb{N} \to \mathbb{N}$
-  explicitly, eg, $f (x) :\equiv x + 3$.
+  explicitly, eg, $f (x) :\equiv x <li class="fragment"> 3$.
 
-+ We can now apply, $f (2) : \mathbb{N}$, and
+<li class="fragment"> We can now apply, $f (2) : \mathbb{N}$, and
   evaluate this application by replacing all
   $x$'s in the body with 2; hence $f (2) \equiv 2 + 3$
 
-+ If we know how to calculate $2 + 3$ we can conclude $f (2) \equiv 5$
+<li class="fragment"> If we know how to calculate $2 + 3$ we can conclude $f (2) \equiv 5$
 
 ---
 
@@ -588,28 +409,28 @@ as a shorthand for $f \equiv \lambda x . x + 3$.
 
 ## Products and sums
 
-+ Given $A, B : \mathsf{Type}$ we can form
+<li class="fragment"> Given $A, B : \mathsf{Type}$ we can form
     - their product <a style="color:#e7ad52">$A \times B : \mathsf{Type}$</a>
     - their sum <a style="color:#e7ad52">$A + B : \mathsf{Type}$</a>
 
-+ The elements of a product are tuples, that is  
+<li class="fragment"> The elements of a product are tuples, that is  
   $(a, b) : A \times B$ if $a : A$ and $b : B$
 
-+ The elements of a sum are injections, that is  
+<li class="fragment"> The elements of a sum are injections, that is  
   $\mathsf{inl}\ a : A + B$ if $a : A$ and $\mathsf{inr}\ b : A + B$, if $b : B$
 
 ---
 
-+ To define a function from a product or a sum it suffices to say   
+<li class="fragment"> To define a function from a product or a sum it suffices to say   
   what the function returns for the
   constructors  
   (tuples for products; injections for sums)
 
-+ As an example we derive the tautology
+<li class="fragment"> As an example we derive the tautology
 $$P ∧ (Q ∨ R) ⇔ (P ∧ Q) ∨ (P ∧ R)$$
 using the propositions as types translation.
 
-+ Assuming $P, Q, R : \mathsf{Type}$, we must
+<li class="fragment"> Assuming $P, Q, R : \mathsf{Type}$, we must
   construct an element of   
   the following type
   $$((P × (Q + R) → (P × Q) + (P × R))$$
@@ -689,10 +510,10 @@ $R^+ f g\ (\mathsf{inl}\ a) :\equiv f a$
 
 $R^+ f g\ (\mathsf{inr}\ b) :\equiv g b$
 
-+ The **recursor** $R^\times$ for products maps a **curried** function $f : A → B → C$
+<li class="fragment"> The **recursor** $R^\times$ for products maps a **curried** function $f : A → B → C$
 to its **uncurried** form, taking tuples as arguments.
 
-+ The **recursor** $R^+$ basically implements the case function performing case
+<li class="fragment"> The **recursor** $R^+$ basically implements the case function performing case
 analysis over elements of $A + B$.
 
 ---
@@ -899,35 +720,67 @@ If <a style="color:#e7ad52">$\varphi$</a> is a proof of
 
 ---
 
-## Martin-Lof intensional type theory
+## Proof Assistants
 
-+ <a style="color:rgb(231,173,82)">Intensional type theory</a> is the brand of type
-theory used in systems like
-<a style="color:mediumpurple">Agda</a> and <a style="color:orangered">Coq</a>
+Type Theory is the foundation of many computer systems for
+interactive theorem proving and very advanced (functional) programming languages.
 
-+ <a style="color:crimson">NuPrl</a>
-  is based on extensional type theory  
+### An incomplete list
 
-+ This is an important distinction and it centers around different notions of
-**equality**
+<ul>
+<li class="fragment"> [NuPRL](https://en.wikipedia.org/wiki/Nuprl) is maybe the oldest implementation of Type Theory, which was developed
+at Cornell. It is based on a different flavour of type theory which
+was called Extensional Type Theory but which is now referred to as Computational
+Type Theory.</li>
+
+<li class="fragment"> [Coq](https://en.wikipedia.org/wiki/Coq) is maybe now the system most used in formal Mathematics and has been
+used for some impressive developments, including a formal proof of the
+Four Colour Theorem and the verification of an optimising C compiler.</li>
+
+<li class="fragment"> [Agda](https://en.wikipedia.org/wiki/Agda_(programming_language)) is a sort of a twitter it can be used as a interactive proof assistant or as
+a dependently typed programming language.</li>
+
+<li class="fragment"> [Idris](https://en.wikipedia.org/wiki/Idris_(programming_language)) goes further on the programming language road by addressing more pragmatic
+concerns when using Type Theory for programming.</li>
+
+<li class="fragment"> [Lean](https://leanprover.github.io/) is developed at CMU and Microsoft Research with strong support for automatic  reasoning.</li>
+</ul>
 
 ---
 
-+ In the original formulation by Martin-Lof, there is a judgement called
-*definitional equality*, which is asserted when two terms denote the same value.
+## Martin-Lof intensional type theory
 
-+ Today, this is most often replaced by a reduction relation.  Two terms are
+<ul>
+<li class="fragment"> <a style="color:rgb(231,173,82)">Intensional type theory</a> is the brand of type
+theory used in systems like
+<a style="color:mediumpurple">Agda</a> and <a style="color:orangered">Coq</a></li>
+
+<li class="fragment"> <a style="color:crimson">NuPrl</a>
+  is based on **extensional** type theory </li>
+
+<li class="fragment"> This is an important distinction and it centers around different notions of
+**equality**</li>
+</ul>
+
+
+---
+<ul>
+<li class="fragment"> In the original formulation by Martin-Lof, there is a judgement called
+*definitional equality*, which is asserted when two terms denote the same value.</li>
+
+<li class="fragment"> Today, this is most often replaced by a reduction relation.  Two terms are
 called *convertible* when they can be reduced to a common decendant using the
 reduction rules.  If we reduce a term as much as possible, we always obtain
 after a finite number of steps, a unique *normal form* (that
-cannot be simplified further).  Convertible terms are interchangeable.
+cannot be simplified further).  Convertible terms are interchangeable.</li>
 
-+ *extensional* versions of type theory,
+<li class="fragment"> *extensional* versions of type theory,
   like <a style="color:crimson">NuPrl</a>,
   have a stronger notion of **definitional equality**   
-  for example, two functions can be identified if their graphs are the same  
+  for example, two functions can be identified if their graphs are the same  </li>
 
-+ However, the price to pay is *undecidability of type checking*
+<li class="fragment"> However, the price to pay is *undecidability of type checking*</li>
+</ul>
 
 ---
 
@@ -936,21 +789,23 @@ cannot be simplified further).  Convertible terms are interchangeable.
 <a style="color:mediumpurple">Intensional</a>
 <a style="color:crimson">Extensional</a>
 
-+ <a style="color:crimson">ETT</a>
+<ul>
+<li class="fragment"> <a style="color:crimson">ETT</a>
   does not distinguish between **definitional equality** (computational)
-  and **propositional equality** (requires proof)
+  and **propositional equality** (requires proof)</li>
 
-+ Type checking is **undecidable** in
+<li class="fragment"> Type checking is **undecidable** in
   <a style="color:crimson">ETT</a>  
-  *programs in the theory might not terminate*
+  *programs in the theory might not terminate*</li>
 
-+ <a style="color:olivedrab">**Example**</a>
-  In <a style="color:crimson">ETT</a> we can give a type to the **Y-combinator**
+<li class="fragment"> <a style="color:olivedrab">**Example**</a>
+  In <a style="color:crimson">ETT</a> we can give a type to the **Y-combinator**</li>
 
-+ This does not prevent <a style="color:crimson">ETT</a> from being a basis
-  for a practical tool, as <a style="color:crimson">NuPRL</a> demonstrates.
+<li class="fragment"> This does not prevent <a style="color:crimson">ETT</a> from being a basis
+  for a practical tool, as <a style="color:crimson">NuPRL</a> demonstrates.</li>
 
-+ From a practical standpoint, there's no difference between a program which doesn't terminate and a program which takes a million years to terminate
+<li class="fragment"> From a practical standpoint, there's no difference between a program which doesn't terminate and a program which takes a million years to terminate</li>
+</ul>
 
 ---
 
@@ -959,30 +814,34 @@ cannot be simplified further).  Convertible terms are interchangeable.
 <a style="color:mediumpurple">Intensional</a>
 <a style="color:crimson">Extensional</a>
 
-+ <a style="color:mediumpurple">ITT</a>
+<ul>
+<li class="fragment"> <a style="color:mediumpurple">ITT</a>
   has decidable type checking, but the representation of
-  standard math concepts can be more cumbersome.
+  standard math concepts can be more cumbersome.</li>
 
-+ In <a style="color:mediumpurple">ITT</a>
+<li class="fragment"> In <a style="color:mediumpurple">ITT</a>
   **extensional reasoning** requires using
-  <a style="color:rgb(231,173,82)">setoids</a> or similar constructions.
+  <a style="color:rgb(231,173,82)">setoids</a> or similar constructions.</li>
 
-+ There are many common math objects that are hard to work
-  with and/or can't be represented without this.
+<li class="fragment"> There are many common math objects that are hard to work
+  with and/or can't be represented without this.</li>
 
-+ **Examples:** Integers and rational numbers can be
+<li class="fragment"> **Examples:** Integers and rational numbers can be
   represented without setoids, but the representations are not
   easy to work with; Reals cannot be represented without
-  setoids or something similar.
+  setoids or something similar.</li>
+</ul>
 
 ---
 
 ## Homotopy type theory
 
-+ <a style="color:olivedrab">HoTT</a> works on resolving these problems
+<ul>
+<li class="fragment"> [HoTT](http://www.homotopytypetheory.org) works on resolving these problems</li>
 
-+ <a style="color:olivedrab">HoTT</a>
+<li class="fragment"> [HoTT](http://www.homotopytypetheory.org)
   allows one to define <a style="color:rgb(231,173,82)">higher inductive types</a>
   that not only define **first-order constructors** (values or points), but **higher-order
   constructors** (equalities between elements--paths), equalities between equalities
-  (homotopies), ad infinitum.
+  (homotopies), ad infinitum.</li>
+</ul>
