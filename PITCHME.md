@@ -72,7 +72,7 @@ We might have an object $x$ and ask wether this object is a **nat** ($x\in \math
 <li class="fragment"> We call <a style="color:#e7ad52">$x : \mathbb N$</a> a ***judgement***</li>
 <li class="fragment"> ...while <a style="color:green">$x \in \mathbb N$</a> is a ***proposition***.</li>
 </p>
-<li class="fragment"> These ideas become clearer and more natural after gaining some experience with Type Theory, and we'll revisit them later.</li>
+<li class="fragment"> These ideas become clearer and more meaningful after gaining some experience with Type Theory, and we'll revisit them later.</li>
 </ul>
 
 ---
@@ -81,9 +81,7 @@ We might have an object $x$ and ask wether this object is a **nat** ($x\in \math
 
 +++
 
-### Questions, Motivation, 
-
-#### and Questionable Motivation
+#### Questions and Motivations
 
 <ul>
 <li class="fragment"> What is a good language for writing proofs?</li>  
