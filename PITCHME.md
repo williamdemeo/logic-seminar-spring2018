@@ -38,9 +38,9 @@ Capretta's PhD thesis (2002) www.cs.nott.ac.uk/~vxc/publications/Abstraction_Com
 ## the basic idea
 
 <ul>
-<li class="fragment"> organize mathematical objects into <a style="color:#e7ad52">**Types**</a> instead of <a style="color:green">**Sets**</a> eg, the <a style="color:#e7ad52">**Type** $\mathbb N$</a> of natural numbers, the <a style="color:#e7ad52">**Type** $\mathbb R$</a> of reals, etc</li>
+<li class="fragment"> Organize mathematical objects into <a style="color:#e7ad52">**Types**</a> instead of <a style="color:green">**Sets**</a> eg, the <a style="color:#e7ad52">**Type** $\mathbb N$</a> of natural numbers, the <a style="color:#e7ad52">**Type** $\mathbb R$</a> of reals, etc.</li>
 
-<li class="fragment"> to say that $\pi$ is real, write <a style="color:#e7ad52">$\pi : \mathbb R$</a></li>
+<li class="fragment"> To say $\pi$ is a real number, we say "$\pi$ has type $\mathbb R$, denoted <a style="color:#e7ad52">$\pi : \mathbb R$</a></li>
 
 <li class="fragment"> Is <a style="color:#e7ad52">Type Theory</a> merely <a style="color:green">Set Theory</a> with the word <a style="color:green">Set</a> replaced by <a style="color:#e7ad52">Type</a> and the symbol <a style="color:green">$\in$</a> replaced by <a style="color:#e7ad52">$:$</a> ?</li>
 
