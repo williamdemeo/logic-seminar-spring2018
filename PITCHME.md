@@ -94,7 +94,7 @@ We might have an object $x$ and ask wether this object is a **nat** ($x\in \math
 
 (PA suffices for much of Number Theory, analysis can be formalized in PA2, etc.)</li>  
 
-<li class="fragment"> In fact, we don't really need to commit, as long as our proofs use
+<li class="fragment"> In fact, we don't need to commit, as long as our proofs use
   standard techniques that we believe are formalizable in *some* system.</li>
 </ul>
 
@@ -104,8 +104,8 @@ We might have an object $x$ and ask wether this object is a **nat** ($x\in \math
 <!-- <img style="float:right" src="assets/image/jps.jpg" alt="Choices" style="width: 350px;float: right"/> -->
 
 <ul>
-<li class="fragment"> But to do math on a computer  
-  *we must make a choice!*</li>
+<li class="fragment"> But to do math on a computer (and to exist)   
+  *we must make choices*.</li>
 <!-- ------ DVF ------------ -->
 <div class="fragment fade-left">
 <img src="assets/image/jps.jpg"
