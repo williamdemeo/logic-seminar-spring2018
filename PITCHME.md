@@ -47,6 +47,8 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 + to say that $\pi$ is real, write <a style="color:#e7ad52">$\pi : \mathbb R$</a>
 
++++
+
 + *Wait a minute!* <a style="color:#e7ad52">Type Theory</a> is merely <a style="color:green">Set Theory</a>
   with the word   
   <a style="color:green">Set</a> replaced by <a style="color:#e7ad52">Type</a> and the
@@ -61,7 +63,7 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 ---
 
-<table class="wikitable">
+<table width=50%>
 <tr>
 <th rowspan="2">Name</th>
 <th rowspan="2">Latest version</th>
