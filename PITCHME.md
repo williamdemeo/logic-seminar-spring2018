@@ -1,4 +1,4 @@
-# Brief Intro to Type Theory and Lambda Calculus
+## Brief Intro to Type Theory and Lambda Calculus
 
 #### William DeMeo   
 [&lt;williamdemeo@gmail.com&gt;](mailto:williamdemeo@gmail.com)  
@@ -17,7 +17,7 @@ www.cs.bham.ac.uk/~pbl/mgsall.pdf
 
 +++
 
-## Other References
+### Other References
 
 + [Naive Type Theory short course](http://www.cs.nott.ac.uk/~psztxa/ntt/)   
   Altenkirch (2016) www.cs.nott.ac.uk/~psztxa/ntt/
@@ -34,7 +34,7 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 ---
 
-# Type Theory
+## Type Theory
 
 +++
 
@@ -52,7 +52,7 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 +++
 
-## Type Theory vs. Set Theory
+### Type Theory vs. Set Theory
 <ul>
 <li>In <a style="color:#e7ad52">Type Theory</a> we are only allowed objects of a *given* type.   
 *The type comes first!*</li>
@@ -63,7 +63,7 @@ We might have an object $x$ and ask wether this object is a **nat** ($x\in \math
 
 +++
 
-## Type Theory vs. Set Theory
+### Type Theory vs. Set Theory
 <ul>
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> we think of $x : \mathbb{N}$ as
   meaning "$x$ is a natural number *by birth*"  </li>
@@ -77,7 +77,7 @@ We might have an object $x$ and ask wether this object is a **nat** ($x\in \math
 
 ---
 
-# Constructive Math
+## Constructive Math
 
 +++
 <ul>
@@ -110,7 +110,7 @@ alt="Choices: JPS" style="float: right;width: 350px" />
 </div>
 <li class="fragment"> A computer program must be  
   based on *some* formal system.</li>
-<li class="fragment"> **ZFC** is not the obvious choice.</li>
+<li class="fragment"> Is **ZFC** the obvious choice?</li>
 <li class="fragment"> **Constructive type theory** can   
 be justified on practical (and maybe philosophical) grounds.</li>
   </ul>
@@ -120,14 +120,22 @@ be justified on practical (and maybe philosophical) grounds.</li>
 **Question:** Why do math on a computer?
 
 <ul>
-<li class="fragment"> Because computers can check whether proofs are correct?
-  <a style="color:#e7ad52">No, the peer review process works.</a></li>
+<p>
+<li class="fragment"> Because computers can check whether proofs are correct?  
+</li>
+<li class="fragment"> <a style="color:#e7ad52">No, the peer review process works.</a></li>  
 
-<li class="fragment"> Because computers can prove many things humans can't?
-  <a style="color:#e7ad52">No, at least not anytime soon.</a></li>
+</p>
 
-<li class="fragment"> Because computers are really good at computing?
-  <a style="color:#e7ad52">Yes!!</a></li>
+<p>
+<li class="fragment"> Because computers can prove many things humans can't?  </li>
+<li class="fragment"> <a style="color:#e7ad52">No, at least not anytime soon.</a></li>
+</p>
+
+<p>
+<li class="fragment"> Because computers are really good at computing?  </li>
+<li class="fragment"> <a style="color:#e7ad52">Yes!!</a></li>
+</p>
 </ul>
 
 +++
@@ -194,7 +202,7 @@ by virtue of the their inherent logical content!</p>
 
 +++
 
-## Sets vs Types: redux
+### Sets vs Types: redux
 <ul>
 <p>
 <li class="fragment"> In <a style="color:green">Set Theory</a>,
@@ -216,7 +224,7 @@ a piece of static information.</li>
 
 +++
 
-## Sets vs Types
+### Sets vs Types: redux
 
 <ul>
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> every object and every expression has a (unique) type
@@ -233,7 +241,7 @@ a piece of static information.</li>
 
 +++
 
-## Sets vs Types
+### Sets vs Types: redux
 
 <ul>
 <li class="fragment"> In <a style="color:green">Set Theory</a> we define
@@ -250,9 +258,7 @@ $\forall x . x \in P \to x \in Q$ </li>
 
 +++
 
-
-
-## Truth Vs. Evidence
+### Truth Vs. Evidence
 Another important difference between Set Theory and Type Theory is the
 way propositions are treated: Set Theory is formulated using predicate logic
 which relies on the notion of **truth**. Type Theory is self-contained and doesn't
