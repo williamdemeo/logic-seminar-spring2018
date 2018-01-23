@@ -349,6 +349,7 @@ $\mathsf{Type}_i$ and assume that all levels act the same unless stated otherwis
 
 ### Functions
 
+<ul>
 <li class="fragment"> In <a style="color:green">Set Theory</a> **function** is a derived concept
   (a subset of the cartesian product with certain properties)</li>
 
@@ -360,9 +361,17 @@ $\mathsf{Type}_i$ and assume that all levels act the same unless stated otherwis
 
 <li class="fragment"> Hence given $A, B : \mathsf{Type}$ we introduce the type of
   functions   
-
   $A \to B : \mathsf{Type}$
 </li>
+
+</ul>
+
++++
+
+### Functions
+
+<ul>
+
 <li class="fragment"> We can define a function
   $f : \mathbb{N} \to \mathbb{N}$
   explicitly, eg, $f (x) :\equiv x <li class="fragment"> 3$.
@@ -374,10 +383,13 @@ $\mathsf{Type}_i$ and assume that all levels act the same unless stated otherwis
 <li class="fragment"> If we know how to calculate $2 + 3$ we can conclude $f (2) \equiv 5$
 </li>
 
+</ul>
+
 +++
 
 ### A word about syntax
 
+<ul>
 <li class="fragment"> In Type Theory, as in functional programming, we usually
 try to save parentheses and write $f x :\equiv x + 3$
 and $f 2$
@@ -399,33 +411,49 @@ is called <a style="color:#e7ad52">β-reduction</a>
 as a shorthand for $f \equiv \lambda x . x + 3$.
 </li>
 </ul>
+
 +++
 
 ### Products and sums
 
-<li class="fragment"> Given $A, B : \mathsf{Type}$ we can form
-    - their product <a style="color:#e7ad52">$A \times B : \mathsf{Type}$</a>
-    - their sum <a style="color:#e7ad52">$A + B : \mathsf{Type}$</a>
+<ul>
+<p>
+<li class="fragment"> Given $A, B : \mathsf{Type}$ we can form  
 
+their product <a style="color:#e7ad52">$A \times B : \mathsf{Type}$</a>  
+
+their sum <a style="color:#e7ad52">$A + B : \mathsf{Type}$</a>
+</li></p>
+<p>
 <li class="fragment"> The elements of a product are tuples, that is  
-  $(a, b) : A \times B$ if $a : A$ and $b : B$
+  $(a, b) : A \times B$ if $a : A$ and $b : B$</li>
+</p>
 
+<p>
 <li class="fragment"> The elements of a sum are injections, that is  
-  $\mathsf{inl}\ a : A + B$ if $a : A$ and $\mathsf{inr}\ b : A + B$, if $b : B$
+  $\mathsf{inl}\ a : A + B$ if $a : A$ and $\mathsf{inr}\ b : A + B$, if $b : B$</li>
+</p>
+</ul>
 
----
++++
 
+<ul>
+<p>
 <li class="fragment"> To define a function from a product or a sum it suffices to say   
   what the function returns for the
   constructors  
   (tuples for products; injections for sums)
+</li></p>
 
+<p>
 <li class="fragment"> As an example we derive the tautology  
 
 $P ∧ (Q ∨ R) ⇔ (P ∧ Q) ∨ (P ∧ R)$  
 
 using the propositions as types translation.
+</li></p>
 
+<p>
 <li class="fragment"> Assuming $P, Q, R : \mathsf{Type}$, we must
   construct an element of   
   the following type  
@@ -433,17 +461,21 @@ using the propositions as types translation.
   $((P × (Q + R) → (P × Q) + (P × R))$  
 
   $\qquad ×((P × Q) + (P × R) → P × (Q + R))$
+</li></p>
+</ul>
 
----
++++
 
 ## Solution
 
-Define $f : P × (Q + R) \to (P × Q) + (P × R)$ as follows:
+<ul>
+<p>
+<li class="fragment">Define $f : P × (Q + R) \to (P × Q) + (P × R)$ as follows:
 
 $f (p, \mathsf{inl}\ q) :\equiv \mathsf{inl}\ (p, q)$  
 
 $f (p, \mathsf{inr}\ r) :\equiv \mathsf{inr}\ (p, r)$  
-
+</li></p><p><li>
 Define $g : (P × Q) + (P × R) \to P × (Q + R)$ as follows:
 
 $g (\mathsf{inl}\ (p, q)) :\equiv (p, l\mathsf{inl}\ q)$  
@@ -451,6 +483,7 @@ $g (\mathsf{inl}\ (p, q)) :\equiv (p, l\mathsf{inl}\ q)$
 $g (\mathsf{inr} (p, r))) :\equiv (p, \mathsf{inr}\ r)$  
 
 The tuple $(f, g)$ is an element of the desired type!
+</li></p></ul>
 
 ---
 
