@@ -37,10 +37,19 @@ Capretta's PhD thesis (2002) www.cs.nott.ac.uk/~vxc/publications/Abstraction_Com
 <ul>
 <li class="fragment"> organize mathematical objects into <a style="color:#e7ad52">**Types**</a> instead of <a style="color:green">**Sets**</a> eg, the <a style="color:#e7ad52">**Type** $\mathbb N$</a> of natural numbers, the <a style="color:#e7ad52">**Type** $\mathbb R$</a> of reals, etc</li>
 <li class="fragment"> to say that $\pi$ is real, write <a style="color:#e7ad52">$\pi : \mathbb R$</a></li>
-<li class="fragment"> *Wait a minute!* <a style="color:#e7ad52">Type Theory</a> is merely <a style="color:green">Set Theory</a> with the word <a style="color:green">Set</a> replaced by <a style="color:#e7ad52">Type</a> and the symbol <a style="color:green">$\in$</a> replaced by <a style="color:#e7ad52">$:$</a> ??</li>
-<li class="fragment"> No.  In <a style="color:#e7ad52">Type Theory</a> we can only make objects of a certain type---*the type comes first*---and then we can construct elements of that type.</li>
+So... <a style="color:#e7ad52">Type Theory</a> is merely <a style="color:green">Set Theory</a> with the word <a style="color:green">Set</a> replaced by <a style="color:#e7ad52">Type</a> and the symbol <a style="color:green">$\in$</a> replaced by <a style="color:#e7ad52">$:$</a> ??</li>
+<li class="fragment"> No, of course not.</li>
+</ul>
+
+---
+
+## Type Theory vs. Set Theory
+<ul>
+<li>In <a style="color:#e7ad52">Type Theory</a> we can only make objects of a certain type---*the type comes first*---and then we can construct elements of that type.</li>
+
 <li class="fragment"> In <a style="color:green">Set Theory</a> all objects are there already and we can organize them into different sets; we might have an object $x$ and ask wether this object is a **nat** ($x\in \mathbb N$) or a **real** ($x \in \mathbb R$).</li>
 </ul>
+
 ---
 
 ## Type Theory vs. Set Theory
