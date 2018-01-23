@@ -145,16 +145,16 @@ No one questions the utility of computer programs on the grounds that
 it's easier to handwrite programs on paper in pseudo-code.</p>
 
 <p class="fragment fade-left">
-<a style="color:#e7ad52">*programs written on paper cannot be executed*</a>
+<a style="color:#e7ad52">*Programs written on paper cannot be executed!*</a>
 </p>
 
 <p class="fragment">
 The objection that formalizing math on computer
 is pointless because we can more easily write it down on a piece of paper can
-be disputed on similar grounds.
+be disputed on similar grounds, however
 </p>
 <p class="fragment fade-left">
-<a style="color:#e7ad52">*proofs of math theorems cannot be executed*</a>  
+<a style="color:#e7ad52">*proofs of math theorems cannot be executed!*</a>  
 </p>
 <p class="fragment"> ...or can they? </p>
 
@@ -179,13 +179,13 @@ result that differ in "efficiency."</li></div>
 
 <ul>
 <p>
-<li class="fragment"> Instead of dwelling on paradigms for formalizing math, consider ways to extend programming languages, e.g. richer data types, new paradigms/techniques.</li>
+<li class="fragment"> Instead of dwelling on paradigms for formalizing math, let's consider ways to extend programming languages, e.g. richer data types, new paradigms/techniques.</li>
 </p><p>
 <li class="fragment"> We will look at a functional language called <a style="color:purple">Lean</a>, and consider
 how it makes programming easier; some classical algorithms become easy or obvious;
 previously inconceivable programs are possible.</li>
 </p><p>
-<li class="fragment"> We hold logical foundations in abeyance for the moment.</li>
+<li class="fragment"> We hold logical foundations in abeyance.</li>
 </p>
 </ul>
 
@@ -276,17 +276,17 @@ as follows:
 
 $[[P \Rightarrow Q]] \equiv [[P]] \to [[Q]]$
 
-$[[P ∧ Q]] &≡ [[P ]] × [[Q]]$
+$[[P ∧ Q]] ≡ [[P ]] × [[Q]]$
 
 $[[\mathsf{True}]] &≡ 1$
 
-$[[P ∨ Q]] &≡ [[P ]] + [[Q]]$
+$[[P ∨ Q]] ≡ [[P ]] + [[Q]]$
 
 $[[\mathsf{False}]] &≡ 0$
 
-$[[∀x : A.P ]] &≡ Πx : A.[[P ]]$
+$[[∀x : A.P ]] ≡ Πx : A.[[P ]]$
 
-$[[∃x : A.P ]] &≡ Σx : A.[[P ]]$
+$[[∃x : A.P ]] ≡ Σx : A.[[P ]]$
 
 +++
 
@@ -298,9 +298,9 @@ disjoint union +, product ×, and → (function) types are familiar
 
 ---
 
-# Non-dependent types
+## Non-dependent types
 
-## Universes
+### Universes
 <ul>
 <li class="fragment"> To get started we have to say what a *type* is. We could introduce another judgement, but
   instead we'll use **universes.**</li>
@@ -312,8 +312,8 @@ disjoint union +, product ×, and → (function) types are familiar
 <li class="fragment"> But what is the type of <a style="color:#e7ad52">$\mathsf{Type}$</a>? Do we have
   <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a>?</li>
 
-<li class="fragment"> This doesn't work in   <a style="color:green">Set Theory</a> due to **Russell's paradox**  
-  (consider the set of all sets that don't contain themselves)</li>
+<li class="fragment"> This doesn't work in   <a style="color:green">Set Theory</a> (Russell's paradox)
+</li>
 
 <li class="fragment"> In Type Theory <a style="color:#e7ad52">$a : A$</a> is not a Prop, hence it's not immediately clear wether the paradox still occurs.</li>
 </ul>
@@ -328,10 +328,13 @@ disjoint union +, product ×, and → (function) types are familiar
   that don't have themselves as immediate subtrees. Then <a style="color:#e7ad52">$T$</a>
   is a subtree of itself iff it isn't.</li>
 
-<li class="fragment"> To avoid this, we introduce a hierarchy of universes
+<li class="fragment"> To avoid this, we introduce a hierarchy of universes  
+
+
   <a style="color:#e7ad52">
-  $$\mathsf{Type}_0 : \mathsf{Type}_1 : \mathsf{Type}_2 : \cdots$$
-  </a>
+  $\mathsf{Type}_0 : \mathsf{Type}_1 : \mathsf{Type}_2 : \cdots$
+  </a>  
+
   and we decree that any <a style="color:#e7ad52">$A : \mathsf{Type}_i$</a>
   can be *lifted* to <a style="color:#e7ad52">$A^+ : \mathsf{Type}_{i+1}$</a></li>
 
@@ -357,7 +360,9 @@ disjoint union +, product ×, and → (function) types are familiar
   elements of its codomain.
 
 <li class="fragment"> Hence given $A, B : \mathsf{Type}$ we introduce the type of
-  functions $$A \to B : \mathsf{Type}$$
+  functions   
+
+  $A \to B : \mathsf{Type}$
 
 <li class="fragment"> We can define a function
   $f : \mathbb{N} \to \mathbb{N}$
@@ -414,15 +419,19 @@ as a shorthand for $f \equiv \lambda x . x + 3$.
   constructors  
   (tuples for products; injections for sums)
 
-<li class="fragment"> As an example we derive the tautology
-$$P ∧ (Q ∨ R) ⇔ (P ∧ Q) ∨ (P ∧ R)$$
+<li class="fragment"> As an example we derive the tautology  
+
+$P ∧ (Q ∨ R) ⇔ (P ∧ Q) ∨ (P ∧ R)$  
+
 using the propositions as types translation.
 
 <li class="fragment"> Assuming $P, Q, R : \mathsf{Type}$, we must
   construct an element of   
-  the following type
-  $$((P × (Q + R) → (P × Q) + (P × R))$$
-  $$\qquad ×((P × Q) + (P × R) → P × (Q + R))$$
+  the following type  
+
+  $((P × (Q + R) → (P × Q) + (P × R))$  
+
+  $\qquad ×((P × Q) + (P × R) → P × (Q + R))$
 
 ---
 
@@ -430,15 +439,15 @@ using the propositions as types translation.
 
 Define $f : P × (Q + R) \to (P × Q) + (P × R)$ as follows:
 
-$$f (p, \mathsf{inl}\ q) :\equiv \mathsf{inl}\ (p, q)$$
+$f (p, \mathsf{inl}\ q) :\equiv \mathsf{inl}\ (p, q)$  
 
-$$f (p, \mathsf{inr}\ r) :\equiv \mathsf{inr}\ (p, r)$$
+$f (p, \mathsf{inr}\ r) :\equiv \mathsf{inr}\ (p, r)$  
 
 Define $g : (P × Q) + (P × R) \to P × (Q + R)$ as follows:
 
-$$g (\mathsf{inl}\ (p, q)) :\equiv (p, l\mathsf{inl}\ q)$$
+$g (\mathsf{inl}\ (p, q)) :\equiv (p, l\mathsf{inl}\ q)$  
 
-$$g (\mathsf{inr} (p, r))) :\equiv (p, \mathsf{inr}\ r)$$
+$g (\mathsf{inr} (p, r))) :\equiv (p, \mathsf{inr}\ r)$  
 
 The tuple $(f, g)$ is an element of the desired type!
 
@@ -464,9 +473,9 @@ is not provable in TT
 
 However, we can prove its double negation (ie "LEM is not refutable")
 
-Using the **propositions-as-types** translation, prove
+Using the **propositions-as-types** translation, prove  
 
-$$(\forall P)\neg \neg(P \vee \neg P )$$
+$(\forall P)\neg \neg(P \vee \neg P )$
 
 If for a particular proposition $P$ we can establish $P \vee \neg P$
 then we can also derive the principle of indirect proof $\neg \neg P \Rightarrow P$
@@ -477,9 +486,9 @@ Show $(P \vee \neg P ) \Rightarrow (\neg \neg P \Rightarrow P )$
 The converse does not hold **locally** (Counterexample?)
 
 ...but it holds **globally**. Show that the two principles are equivalent.
-That is, prove:
+That is, prove:  
 
-$$(\forall P)(P \vee \neg P ) \Longrightarrow (\forall P)(\neg \neg P \Rightarrow P )$$
+$(\forall P)(P \vee \neg P ) \Longrightarrow (\forall P)(\neg \neg P \Rightarrow P )$
 
 ---
 
@@ -621,9 +630,9 @@ indexed by an <u>*element*</u> of another type
 
 The **$n$-tuple type**
 <a style="color:#e7ad52">$A^n : \mathsf{Type}$</a>
-is indexed by \underline{*two*} parameters
+is indexed by \underline{*two*} parameters  
 
-$$\underline{n} : \mathsf{Type} \quad \text{ and } \quad A : \mathsf{Type}$$  
+$\underline{n} : \mathsf{Type} \quad \text{ and } \quad A : \mathsf{Type}$  
 
 <div class="fragment fade-left">
 In general, a <a style="color:#e7ad52">*dependent type*</a> is obtained by applying a
