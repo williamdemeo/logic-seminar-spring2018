@@ -99,7 +99,7 @@ We might have an object $x$ and ask wether this object is a **nat** ($x\in \math
 (PA suffices for much of Number Theory, analysis can be formalized in PA2, etc.)</li>  
 
 <li class="fragment"> In fact, we don't need to commit, as long as our proofs use
-  standard techniques that we believe are formalizable in *some* system.</li>
+  standard techniques that are formalizable in *some* system.</li>
 </ul>
 
 +++
@@ -124,7 +124,7 @@ be justified on practical (and maybe philosophical) grounds.</li>
 
 +++
 
-#### Questionable Motivation
+#### Questions and Motivations
 
 Why do math on a computer?
 
@@ -160,9 +160,11 @@ it's easier to handwrite programs on paper in pseudo-code.</p>
 <p class="fragment">
 The objection that formalizing math on computer
 is pointless because we can more easily write it down on a piece of paper can
-be disputed on similar grounds, however
+be disputed on similar grounds.  
 </p>
 <p class="fragment fade-left">
+But...  
+
 <a style="color:#e7ad52">*proofs of math theorems cannot be executed!*</a>  
 </p>
 <p class="fragment"> ...or can they? </p>
