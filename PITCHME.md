@@ -80,18 +80,23 @@ We might have an object $x$ and ask wether this object is a **nat** ($x\in \math
 ## Constructive Math
 
 +++
+
+### Questions, Motivation, 
+
+#### and Questionable Motivation
+
 <ul>
-<li class="fragment"> What is a good language for writing proofs?</li>
+<li class="fragment"> What is a good language for writing proofs?</li>  
 
-<li class="fragment"> What kind of math do we want to do?</li>
+<li class="fragment"> What kind of math do we want to do?</li>  
 
-<li class="fragment"> In principle all math can be formalized in ZFC.</li>
+<li class="fragment"> In principle all math can be formalized in ZFC.</li>  
 
-<li class="fragment"> Usually a much weaker theory suffices</li>  
-<li class="fragment"> (PA suffices for much of Number Theory)   
-  (Analysis can be formalized in PA2)</li>
+<li class="fragment"> Usually a much weaker theory suffices.  
 
-<li class="fragment"> In fact, we don't need to commit, as long as our proofs use
+(PA suffices for much of Number Theory, analysis can be formalized in PA2, etc.)</li>  
+
+<li class="fragment"> In fact, we don't really need to commit, as long as our proofs use
   standard techniques that we believe are formalizable in *some* system.</li>
 </ul>
 
@@ -110,7 +115,7 @@ alt="Choices: JPS" style="float: right;width: 350px" />
 </div>
 <li class="fragment"> A computer program must be  
   based on *some* formal system.</li>
-<li class="fragment"> Is **ZFC** the obvious choice?</li>
+<li class="fragment"> Is **ZFC** the most natural choice?</li>
 <li class="fragment"> **Constructive type theory** can   
 be justified on practical (and maybe philosophical) grounds.</li>
   </ul>
