@@ -120,24 +120,26 @@ be justified on practical (and maybe philosophical) grounds.</li>
 
 +++
 
-**Question:** Why do math on a computer?
+#### Questionable Motivation
+
+Why do math on a computer?
 
 <ul>
 <p>
 <li class="fragment"> Because computers can check whether proofs are correct?  
 </li>
-<li class="fragment"> <a style="color:#e7ad52">No, the peer review process works.</a></li>  
+<li class="fragment"> <a style="color:#e7ad52">No. The peer review process works pretty well.</a></li>  
 
 </p>
 
 <p>
 <li class="fragment"> Because computers can prove many things humans can't?  </li>
-<li class="fragment"> <a style="color:#e7ad52">No, at least not anytime soon.</a></li>
+<li class="fragment"> <a style="color:#e7ad52">No.  At least not anytime soon.</a></li>
 </p>
 
 <p>
 <li class="fragment"> Because computers are really good at computing?  </li>
-<li class="fragment"> <a style="color:#e7ad52">Yes!!</a></li>
+<li class="fragment"> <a style="color:#e7ad52">Yes!</a></li>
 </p>
 </ul>
 
@@ -182,14 +184,24 @@ result that differ in "efficiency."</li></div>
 
 <ul>
 <p>
-<li class="fragment"> Instead of dwelling on paradigms for formalizing math, let's consider ways to extend programming languages, e.g. richer data types, new paradigms/techniques.</li>
-</p><p>
-<li class="fragment"> We will look at a functional language called <a style="color:purple">Lean</a>, and consider
-how it makes programming easier; some classical algorithms become easy or obvious;
-previously inconceivable programs are possible.</li>
-</p><p>
-<li class="fragment"> We hold logical foundations in abeyance.</li>
+<li class="fragment"> Instead of worrying about which system is best for formalizing math, 
+let's consider ways to extend programming languages, e.g. richer data types, new paradigms/techniques.</li>
+</p>  
+
+<p>
+<li class="fragment"> Later we will look at a functional programming language 
+called <a style="color:purple">Lean</a>, and consider
+how it makes programming easier. </li>
+</p>  
+
+<p>
+<li class="fragment"> 
+Some classical algorithms become easy or obvious;
+even previously inconceivable programs become possible.</li>
 </p>
+<!-- <p>
+<li class="fragment"> We hold logical foundations in abeyance.</li>
+</p> -->
 </ul>
 
 ---
