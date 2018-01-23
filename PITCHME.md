@@ -9,10 +9,10 @@
 
 ### Main References
 
-+ [Thorsten Altenkirch's notes on type theory](http://www.cs.nott.ac.uk/~psztxa/ewscs-17/notes.pdf)  
++ [Thorsten Altenkirch's notes on Type Theory](http://www.cs.nott.ac.uk/~psztxa/ewscs-17/notes.pdf)  
 www.cs.nott.ac.uk/~psztxa/ewscs-17/notes.pdf
 
-+ [Paul Levy's notes on lambda calculus](http://www.cs.bham.ac.uk/~pbl/mgsall.pdf)  
++ [Paul Levy's notes on Lambda Calculus](http://www.cs.bham.ac.uk/~pbl/mgsall.pdf)  
 http://www.cs.bham.ac.uk/~pbl/mgsall.pdf
 
 +++
@@ -40,7 +40,7 @@ Capretta's PhD thesis (2002) www.cs.nott.ac.uk/~vxc/publications/Abstraction_Com
 <ul>
 <li class="fragment"> Organize mathematical objects into <a style="color:#e7ad52">**Types**</a> instead of <a style="color:green">**Sets**</a> eg, the <a style="color:#e7ad52">**Type** $\mathbb N$</a> of natural numbers, the <a style="color:#e7ad52">**Type** $\mathbb R$</a> of reals, etc.</li>
 
-<li class="fragment"> To say $\pi$ is a real number, we say "$\pi$ has type $\mathbb R$, denoted <a style="color:#e7ad52">$\pi : \mathbb R$</a></li>
+<li class="fragment"> To say $\pi$ is a real number, we say "$\pi$ has type $\mathbb R$," denoted <a style="color:#e7ad52">$\pi : \mathbb R$</a></li>
 
 <li class="fragment"> Is <a style="color:#e7ad52">Type Theory</a> merely <a style="color:green">Set Theory</a> with the word <a style="color:green">Set</a> replaced by <a style="color:#e7ad52">Type</a> and the symbol <a style="color:green">$\in$</a> replaced by <a style="color:#e7ad52">$:$</a> ?</li>
 
@@ -66,12 +66,12 @@ Capretta's PhD thesis (2002) www.cs.nott.ac.uk/~vxc/publications/Abstraction_Com
 <li class="fragment"> We say <a style="color:#e7ad52">$x : \mathbb N$</a> is a **judgement** while
   <a style="color:green">$x \in \mathbb N$</a> is a **proposition**</li>
 </p>
-<li class="fragment"> We will revisit these ideas again and again, and they will become clearer once we gain some experience with Type Theory.</li>
+<li class="fragment"> These ideas become clearer and more natural once we gain some experience with Type Theory.</li>
 </ul>
 
 ---
 
-# Part 1: Constructive Math
+# Constructive Math
 
 ---
 <ul>
@@ -81,8 +81,8 @@ Capretta's PhD thesis (2002) www.cs.nott.ac.uk/~vxc/publications/Abstraction_Com
 
 <li class="fragment"> In principle all math can be formalized in ZFC.</li>
 
-<li class="fragment"> Usually a much weaker theory is sufficient  
-  (PA suffices for much of Number Theory)   
+<li class="fragment"> Usually a much weaker theory suffices</li>  
+<li class="fragment"> (PA suffices for much of Number Theory)   
   (Analysis can be formalized in PA2)</li>
 
 <li class="fragment"> In fact, we don't need to commit, as long as our proofs use
@@ -91,7 +91,7 @@ Capretta's PhD thesis (2002) www.cs.nott.ac.uk/~vxc/publications/Abstraction_Com
 ---
 
 <!-- ------ JPS ------------ -->
-<img src="./assets/md/assets/jps.jpg" alt="Choices" style="width: 350px;float: right"/>
+<img src="assets/image/jps.jpg" alt="Choices" style="width: 350px;float: right"/>
 
 <ul>
 <li class="fragment"> But to do math on a computer  
@@ -149,7 +149,7 @@ compute all objects claimed to exist and
 decide all properties claimed decidable.</li>
 <!-- ------ DVF ------------ -->
 <div class="fragment fade-left">
-<img src="./assets/md/assets/Darth-Vader-faith.jpg" alt="Darth Vader faith" style="width: 300px;float: right"/>
+<img src="assets/image/Darth-Vader-faith.jpg" alt="Darth Vader faith" style="width: 300px;float: right"/>
 </div>
 <li class="fragment"> It may seem strange to think of a proof  
 as a program, even stranger that there  
