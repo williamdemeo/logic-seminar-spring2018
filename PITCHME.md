@@ -278,11 +278,11 @@ $[[P \Rightarrow Q]] \equiv [[P]] \to [[Q]]$
 
 $[[P ∧ Q]] ≡ [[P ]] × [[Q]]$
 
-$[[\mathsf{True}]] &≡ 1$
+$[[\mathsf{True}]] ≡ 1$
 
 $[[P ∨ Q]] ≡ [[P ]] + [[Q]]$
 
-$[[\mathsf{False}]] &≡ 0$
+$[[\mathsf{False}]] ≡ 0$
 
 $[[∀x : A.P ]] ≡ Πx : A.[[P ]]$
 
