@@ -287,7 +287,7 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 ---
 
 <!-- ------ JPS ------------ -->
-<img src="img/jps.jpg" alt="Choices" style="width: 350px;float: right"/>
+<img src="assets/image/jps.jpg" alt="Choices" style="width: 350px;float: right"/>
 
 + But to do math on a computer  
   *we must make a choice!*
@@ -342,7 +342,7 @@ compute all objects claimed to exist and
 decide all properties claimed decidable.
 <!-- ------ DVF ------------ -->
 <div class="fragment fade-left">
-<img src="img/Darth-Vader-faith.jpg" alt="Darth Vader faith" style="width: 300px;float: right"/>
+<img src="assets/image/Darth-Vader-faith.jpg" alt="Darth Vader faith" style="width: 300px;float: right"/>
 </div>
 + It may seem strange to think of a proof  
 as a program, even stranger that there  
