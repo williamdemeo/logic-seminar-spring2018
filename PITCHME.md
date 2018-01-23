@@ -335,15 +335,14 @@ disjoint union +, product ×, and → (function) types are familiar
   $\mathsf{Type}_0 : \mathsf{Type}_1 : \mathsf{Type}_2 : \cdots$
   </a>    
 
-  and we decree that any $A : \mathsf{Type}_i$ can be *lifted* to
+  <!-- and we decree that any $A : \mathsf{Type}_i$ can be *lifted* to
   $A^+ : \mathsf{Type}_{i+1}$ </li>
+ -->
+<li class="fragment"> Being explicit about universe levels can be annoying.  
+  In notation we ignore levels, but take care to avoid using universes in a cyclic way.</li>
 
-<li class="fragment"> Being explicit about universe levels can be quite annoying.  
-  In notation we ignore the levels, but take care to avoid using universes in a cyclic way.</li>
-
-<li class="fragment"> That is we write $\mathsf{Type}$ as a metavariable for
-$\mathsf{Type}_i$ and assume that all levels
-act the same unless stated otherwise.</li>
+<li class="fragment"> We write $\mathsf{Type}$ as a metavariable for
+$\mathsf{Type}_i$ and assume that all levels act the same unless stated otherwise.</li>
 </ul>
 
 +++
