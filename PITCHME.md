@@ -1,10 +1,12 @@
-# Type Theory Crash Course<br> based on<br> [Thorsten Altenkirch's notes](http://www.cs.nott.ac.uk/~psztxa/ewscs-17/notes.pdf)
-lectures/slides by William DeMeo [&lt;williamdemeo@gmail.com&gt;](mailto:williamdemeo@gmail.com)  
-UH MFC Bootcamp, 29--31 March 2017  
+# Type Theory Crash Course
 
-# Part 0: What is Type Theory?
+## based on [Thorsten Altenkirch's notes](http://www.cs.nott.ac.uk/~psztxa/ewscs-17/notes.pdf)
 
----
+### lectures/slides by William DeMeo [&lt;williamdemeo@gmail.com&gt;](mailto:williamdemeo@gmail.com)  
+
+### CU Boulder Logic Seminar, 23 Jan 2018  
+
++++
 
 ## References
 
@@ -24,42 +26,26 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 ---
 
+# Part 0: What is Type Theory?
+
+---
+
 ## Two Iterpretations
 
-+ <a style="color:#e7ad52">**Type Theory** (TT)</a> (with caps) is an
-  alternative foundation for Mathematics---an alternative to Set Theory (ST)
-
-+ pioneered by Swedish mathematician <a style="color:#e7ad52">**Per Martin-Löf**</a>
-
-+ <a style="color:#e7ad52">**type theory** (tt)</a> (w/out caps) is the theory of types in programming languages
-
-+ <a style="color:#e7ad52">TT</a> and <a style="color:#e7ad52">tt</a> are related
-  but different subjects
++ <a style="color:#e7ad52">**Type Theory** (TT)</a> (with caps) is an alternative foundation for Mathematics---an alternative to Set Theory (ST) |
++ pioneered by Swedish mathematician <a style="color:#e7ad52">**Per Martin-Löf**</a> |
++ <a style="color:#e7ad52">**type theory** (tt)</a> (w/out caps) is the theory of types in programming languages |
++ <a style="color:#e7ad52">TT</a> and <a style="color:#e7ad52">tt</a> are related but different subjects|
 
 ---
 
 ## Type Theory: the basic idea
 
-+ organize mathematical objects into <a style="color:#e7ad52">**Types**</a> instead of
-  <a style="color:green">**Sets**</a>   
-  eg, the <a style="color:#e7ad52">**Type** $\mathbb N$</a> of natural numbers,
-  the <a style="color:#e7ad52">**Type** $\mathbb R$</a> of reals, etc
-
-+ to say that $\pi$ is real, write <a style="color:#e7ad52">$\pi : \mathbb R$</a>
-
-+++
-
-+ *Wait a minute!* <a style="color:#e7ad52">Type Theory</a> is merely <a style="color:green">Set Theory</a>
-  with the word   
-  <a style="color:green">Set</a> replaced by <a style="color:#e7ad52">Type</a> and the
-  symbol <a style="color:green">$\in$</a> replaced by <a style="color:#e7ad52">$:$</a> ??<br><br>
-
-+ Of course not.  In <a style="color:#e7ad52">Type Theory</a> we can only make objects of a certain
-  type---*the type comes first*---and then we can construct elements of that type.
-
-+ In <a style="color:green">Set Theory</a> all objects are there already and we can organize
-  them into different sets; we might have an object $x$ and ask wether this object is a
-  **nat** ($x\in \mathbb N$) or a **real** ($x \in \mathbb R$).
++ organize mathematical objects into <a style="color:#e7ad52">**Types**</a> instead of <a style="color:green">**Sets**</a> eg, the <a style="color:#e7ad52">**Type** $\mathbb N$</a> of natural numbers, the <a style="color:#e7ad52">**Type** $\mathbb R$</a> of reals, etc |
++ to say that $\pi$ is real, write <a style="color:#e7ad52">$\pi : \mathbb R$</a> |
++ *Wait a minute!* <a style="color:#e7ad52">Type Theory</a> is merely <a style="color:green">Set Theory</a> with the word <a style="color:green">Set</a> replaced by <a style="color:#e7ad52">Type</a> and the symbol <a style="color:green">$\in$</a> replaced by <a style="color:#e7ad52">$:$</a> ?? |
++ Of course not.  In <a style="color:#e7ad52">Type Theory</a> we can only make objects of a certain type---*the type comes first*---and then we can construct elements of that type.|
++ In <a style="color:green">Set Theory</a> all objects are there already and we can organize them into different sets; we might have an object $x$ and ask wether this object is a **nat** ($x\in \mathbb N$) or a **real** ($x \in \mathbb R$).|
 
 ---
 
