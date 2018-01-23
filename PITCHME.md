@@ -36,9 +36,11 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 ## Type Theory
 
-+++
+---
 
-### the basic idea
+### Type Theory vs. Set Theory
+
+#### Preliminaries
 
 <ul>
 <li class="fragment"> Organize mathematical objects into <a style="color:#e7ad52">**Types**</a> instead of <a style="color:green">**Sets**</a> eg, the <a style="color:#e7ad52">**Type** $\mathbb N$</a> of natural numbers, the <a style="color:#e7ad52">**Type** $\mathbb R$</a> of reals, etc.</li>
@@ -52,7 +54,8 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 +++
 
-### Type Theory vs. Set Theory
+#### Type Theory vs. Set Theory: preliminaries
+
 <ul>
 <li>In <a style="color:#e7ad52">Type Theory</a> we are only allowed objects of a *given* type.   
 *The type comes first!*</li>
@@ -63,7 +66,8 @@ We might have an object $x$ and ask wether this object is a **nat** ($x\in \math
 
 +++
 
-### Type Theory vs. Set Theory
+#### Type Theory vs. Set Theory: preliminaries
+
 <ul>
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> we think of $x : \mathbb{N}$ as
   meaning "$x$ is a natural number *by birth*"  </li>
@@ -187,13 +191,11 @@ result that differ in "efficiency."</li></div>
 <li class="fragment"> Instead of worrying about which system is best for formalizing math, 
 let's consider ways to extend programming languages, e.g. richer data types, new paradigms/techniques.</li>
 </p>  
-
 <p>
 <li class="fragment"> Later we will look at a functional programming language 
 called <a style="color:purple">Lean</a>, and consider
 how it makes programming easier. </li>
 </p>  
-
 <p>
 <li class="fragment"> 
 Some classical algorithms become easy or obvious;
@@ -208,18 +210,22 @@ even previously inconceivable programs become possible.</li>
 
 ### Curry-Howard Correspondence
 
-<p class="fragment fade-left">
+<p class="fragment">
 Eventually, we'll see <a style="color:#e7ad52">*programs as proofs*</a>
 of theorems and <a style="color:#e7ad52">**constructive math**</a>
 as a subsystem of the programming language.</p>
 
-<p class="fragment fade-left">**The most important advantage:**  
+<p class="fragment">**The most important advantage:**  
 <a style="color:#e7ad52">*programs are guaranteed correct*</a>   
 by virtue of the their inherent logical content!</p>
 
-+++
+---
 
 ### Sets vs Types: redux
+
++++
+
+#### Sets vs Types: redux
 <ul>
 <p>
 <li class="fragment"> In <a style="color:green">Set Theory</a>,
@@ -241,7 +247,7 @@ a piece of static information.</li>
 
 +++
 
-### Sets vs Types: redux
+#### Sets vs Types: redux
 
 <ul>
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> every object and every expression has a (unique) type
@@ -258,7 +264,7 @@ a piece of static information.</li>
 
 +++
 
-### Sets vs Types: redux
+#### Sets vs Types: redux
 
 <ul>
 <li class="fragment"> In <a style="color:green">Set Theory</a> we define
@@ -273,17 +279,32 @@ $\forall x . x \in P \to x \in Q$ </li>
   a given type. $\subseteq$ can be defined as a predicate on such subsets.</li>
 </ul>
 
-+++
+---
 
 ### Truth Vs. Evidence
+
+<p class="fragment">
 Another important difference between Set Theory and Type Theory is the
-way propositions are treated: Set Theory is formulated using predicate logic
-which relies on the notion of **truth**. Type Theory is self-contained and doesn't
+way propositions are treated. 
+</p>
+
+<p class="fragment">
+Set Theory is formulated using predicate logic
+which relies on the notion of **truth**.
+</p>
+
+<p class="fragment">
+ Type Theory is self-contained and doesn't
 refer to **truth**, but rather **evidence**.
+</p>
 
 ---
 
-## Curry-Howard Correspondence
+### Curry-Howard Correspondence
+
++++
+
+#### Curry-Howard Correspondence
 
 Using the <a style="color:#e7ad52">propositions-as-types</a> translation
 we can assign to any proposition $P$ the type of its evidence $[[P]]$
@@ -305,15 +326,21 @@ $[[∃x : A.P ]] ≡ Σx : A.[[P ]]$
 
 +++
 
+#### Curry-Howard Correspondence
+
 0 is the empty type, 1 is the type with exactly one element
 
 disjoint union +, product ×, and → (function) types are familiar
 
 Π and Σ may be less familiar; we look at them later.
 
-+++
+---
 
 ### Universes
+
++++
+
+#### Universes
 <ul>
 <li class="fragment"> To get started we have to say what a *type* is. We could introduce another judgement, but
   instead we'll use **universes.**</li>
@@ -333,7 +360,7 @@ disjoint union +, product ×, and → (function) types are familiar
 
 +++
 
-### Universes
+#### Universes
 
 <ul>
 <li class="fragment"> It turns out a Type Theory with <a style="color:#e7ad52">$\mathsf{Type} : \mathsf{Type}$</a> does
@@ -360,9 +387,13 @@ disjoint union +, product ×, and → (function) types are familiar
 $\mathsf{Type}_i$ and assume that all levels act the same unless stated otherwise.</li>
 </ul>
 
-+++
+---
 
 ### Functions
+
++++
+
+#### Functions
 
 <ul>
 <li class="fragment"> In <a style="color:green">Set Theory</a> **function** is a derived concept
@@ -384,7 +415,7 @@ elements of its codomain.</li>
 
 +++
 
-### Functions
+#### Functions
 
 <ul>
 
@@ -401,9 +432,13 @@ elements of its codomain.</li>
 
 </ul>
 
-+++
+---
 
-### A word about syntax
+### Syntax
+
+#### Anonymous functions and lambda abstractions
+
++++
 
 <ul>
 <li class="fragment"> In Type Theory, as in functional programming, we usually
@@ -453,6 +488,7 @@ their sum <a style="color:#e7ad52">$A + B : \mathsf{Type}$</a>
 
 +++
 
+#### Example
 <ul>
 <p>
 <li class="fragment"> To define a function from a product or a sum it suffices to say   
@@ -469,24 +505,25 @@ $P ∧ (Q ∨ R) ⇔ (P ∧ Q) ∨ (P ∧ R)$
 using the propositions as types translation.
 </li></p>
 
-<p>
-<li class="fragment"> Assuming $P, Q, R : \mathsf{Type}$, we must
-  construct an element of   
-  the following type  
++++
+
+#### Example 
+
+<p class="fragment"> Assuming $P, Q, R : \mathsf{Type}$,
+  construct an element of the following type  
 
   $((P × (Q + R) → (P × Q) + (P × R))$  
 
   $\qquad ×((P × Q) + (P × R) → P × (Q + R))$
-</li></p>
-</ul>
+</p>
 
 +++
 
-## Solution
+#### Solution
 
 <ul>
 <p>
-<li class="fragment">Define $f : P × (Q + R) \to (P × Q) + (P × R)$ as follows:
+<li class="fragment"> Define $f : P × (Q + R) \to (P × Q) + (P × R)$ as follows:
 
 $f (p, \mathsf{inl}\ q) :\equiv \mathsf{inl}\ (p, q)$  
 
@@ -503,7 +540,11 @@ The tuple $(f, g)$ is an element of the desired type!
 
 ---
 
-## Exercise 1
+### exercises
+
++++
+
+#### Exercise 1
 
 Using the propositions as types translation, try to prove the following tautologies
 (where P, Q, R : Type are propositions represented as types)
@@ -514,9 +555,9 @@ Using the propositions as types translation, try to prove the following tautolog
 4. ¬(P ∧ Q) ⇔ ¬P ∨ ¬Q
 5. ¬(P ⇔ ¬P )
 
----
++++
 
-## Exercise 2
+#### Exercise 2
 
 **Law of Excluded Middle** $(\forall P) (P \vee \neg P)$
 is not provable in TT
@@ -540,7 +581,7 @@ That is, prove:
 
 $(\forall P)(P \vee \neg P ) \Longrightarrow (\forall P)(\neg \neg P \Rightarrow P )$
 
----
++++
 
 Functions out of products and sums can be reduced to using a fixed set of
 **combinators** called <a style="color:#e7ad52">*non-dependent eliminators*</a>
@@ -563,9 +604,9 @@ to its **uncurried** form, taking tuples as arguments.
 <li class="fragment"> The **recursor** $R^+$ basically implements the case function performing case
 analysis over elements of $A + B$.
 
----
++++
 
-## Exercise 3
+#### Exercise 3
 
 Show that using the **recursor** $R^\times$ we can define the projections:
 
@@ -579,9 +620,9 @@ snd (a, b) :≡ b
 
 Vice versa: can the recursor be defined using only the projections?
 
----
++++
 
-## The unit and empty types
+### The unit and empty types
 
 + Denote by $\mathbf{1}$ the empty product, called the <a style="color:#e7ad52">*unit type*</a>
 
@@ -599,13 +640,13 @@ $R^\mathbf{0} : \mathbf{0} → C$ (no defining eqn since it won't be applied)
 
 + The recursor for the empty type implements the logical principle *ex falso quod libet*
 
----
++++
 
-## Exercise 4
+#### Exercise 4
 
 Construct solutions to exercises 1 and 2 using only the eliminators.
 
----
++++
 
 + The use of arithmetical symbols for operators on types is justified because
 they act like the corresponding operations on finite types.
@@ -625,9 +666,9 @@ $0_n, 1_n, \dots, (n - 1)_n : \underline{n}$
 This use of equality will be justified later when we introduce the
 **univalence principle**
 
----
++++
 
-## Function Types are Exponentials
+### Function Types are Exponentials
 
 The arithmetic interpretation of types also extends to the function type,
 which corresponds to exponentiation. Indeed, in Mathematics the function type
@@ -636,15 +677,11 @@ $\underline{m^n} = \underline{n} \to \underline{m}$.
 
 ---
 
-## End of Part 3
+### Dependent Types
 
----
++++
 
-# Part 4: Dependent Types
-
----
-
-## What are Dependent Types?
+#### What are Dependent Types?
 
 <p class="fragment fade-left">
 You may be familiar with <a style="color:#e7ad52">polymorphic types</a> (aka generics)  
@@ -674,9 +711,10 @@ indexed by an <u>*element*</u> of another type
 <a style="color:#e7ad52">$\underline{n} : \mathsf{Type}$</a>, the *finite type* whose inhabitants are $0_n, 1_n, \dots, (n - 1)_n : \underline{n}$
 </div>
 
----
 
-## What are Dependent Types?
++++
+
+#### What are Dependent Types?
 
 The **$n$-tuple type**
 <a style="color:#e7ad52">$A^n : \mathsf{Type}$</a>
@@ -705,9 +743,9 @@ $\mathsf{Fin} : \mathbb{N} \to \mathsf{Type}$
 $\mathsf{Fin}\; n :\equiv \underline{n}$
 </div>
 
----
++++
 
-## Curry-Howard again
+### Curry-Howard again
 
 In the *propositions-as-types* view, <a style="color:#e7ad52">**dependent types**</a>
 are used to encode predicates.
@@ -732,7 +770,12 @@ Of course <a style="color:#e7ad52">$\mathsf{Prime}\; n$</a> could be uninhabited
 
 ---
 
-## Codifying Relations
+### Codifying Relations
+
++++
+
+#### Codifying Relations
+
 
 By <a style="color:#e7ad52">currying</a> we can also use dependent types to represent **relations**
 
@@ -767,12 +810,12 @@ If <a style="color:#e7ad52">$\varphi$</a> is a proof of
 
 ---
 
-## Proof Assistants
+### Proof Assistants
 
 Type Theory is the foundation of many computer systems for
 interactive theorem proving and very advanced (functional) programming languages.
 
-### An incomplete list
+#### An incomplete list
 
 <ul>
 <li class="fragment"> [NuPRL](https://en.wikipedia.org/wiki/Nuprl) is maybe the oldest implementation of Type Theory, which was developed
@@ -795,7 +838,7 @@ concerns when using Type Theory for programming.</li>
 
 ---
 
-## Martin-Lof intensional type theory
+### Martin-Lof intensional type theory
 
 <ul>
 <li class="fragment"> <a style="color:rgb(231,173,82)">Intensional type theory</a> is the brand of type
