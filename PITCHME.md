@@ -62,11 +62,11 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 ## Type Theory vs. Set Theory
 <ul>
 <li class="fragment"> In <a style="color:#e7ad52">Type Theory</a> we think of $x : \mathbb{N}$ as
-  meaning that $x$ is a natural number "by birth"  </li>
-<li class="fragment">...and then we might ask whether $x$ is also a real number</li>
+  meaning that $x$ is a natural number *"by birth"*  </li>
+<li class="fragment">...we might go on to ask whether $x$ is also a real number</li>
 <p>
-<li class="fragment"> We say <a style="color:#e7ad52">$x : \mathbb N$</a> is a **judgement**</li>
-<li class="fragment"> ...while <a style="color:green">$x \in \mathbb N$</a> is a **proposition**</li>
+<li class="fragment"> We say <a style="color:#e7ad52">$x : \mathbb N$</a> is a ***judgement***</li>
+<li class="fragment"> ...while <a style="color:green">$x \in \mathbb N$</a> is a ***proposition***</li>
 </p>
 <li class="fragment"> These ideas become clearer and more natural once we gain some experience with Type Theory.</li>
 </ul>
