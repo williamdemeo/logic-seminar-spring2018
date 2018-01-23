@@ -54,7 +54,8 @@ www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
 
 ## Type Theory vs. Set Theory
 <ul>
-<li>In <a style="color:#e7ad52">Type Theory</a> we are only allowed objects of a *given* type   *the type comes first*</li>
+<li>In <a style="color:#e7ad52">Type Theory</a> we are only allowed objects of a *given* type   
+*the type comes first*</li>
 
 <li class="fragment"> In <a style="color:green">Set Theory</a> all objects are there already and we can organize them into different sets; we might have an object $x$ and ask wether this object is a **nat** ($x\in \mathbb N$) or a **real** ($x \in \mathbb R$).</li>
 </ul>
