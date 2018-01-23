@@ -1,8 +1,4 @@
-# Brief Introduction to Type Theory and Lambda Calculus
-
-### based on
-+ [Paul Levy's notes on lambda calculus](http://www.cs.bham.ac.uk/~pbl/mgsall.pdf)
-+ [Thorsten Altenkirch's notes on type theory](http://www.cs.nott.ac.uk/~psztxa/ewscs-17/notes.pdf)
+# Brief Intro to Type Theory and Lambda Calculus
 
 #### lectures/slides by William DeMeo [&lt;williamdemeo@gmail.com&gt;](mailto:williamdemeo@gmail.com)  
 
@@ -10,37 +6,31 @@
 
 +++
 
-## References
+### Main References
 
-+ Altenkirch (2016) [Naive Type Theory short course](http://www.cs.nott.ac.uk/~psztxa/ntt/)  
-  www.cs.nott.ac.uk/~psztxa/ntt/
++ [Thorsten Altenkirch's notes on type theory](http://www.cs.nott.ac.uk/~psztxa/ewscs-17/notes.pdf)
 
-+ Levy (2014) [Typed Lambda Calculus](http://www.cs.bham.ac.uk/~pbl/mgs2014lam.html)  
-www.cs.bham.ac.uk/~pbl/mgs2014lam.html
++ [Paul Levy's notes on lambda calculus](http://www.cs.bham.ac.uk/~pbl/mgsall.pdf)
 
-+ Capretta (2002) [Abstraction and Computation, PhD thesis](http://www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf)  
-www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
++++
 
-+ Harper (2013) [CMU course on HoTT](http://www.cs.cmu.edu/~rwh/courses/hott/)  
-www.cs.cmu.edu/~rwh/courses/hott/
+## Other References
+
++ [Naive Type Theory short course](http://www.cs.nott.ac.uk/~psztxa/ntt/)   
+  Altenkirch (2016) www.cs.nott.ac.uk/~psztxa/ntt/
+
++ [Typed Lambda Calculus short course](http://www.cs.bham.ac.uk/~pbl/mgs2014lam.html)   
+  Levy (2014) www.cs.bham.ac.uk/~pbl/mgs2014lam.html
+
++ [Abstraction and Computation](http://www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf)    
+Capretta's PhD thesis (2002) www.cs.nott.ac.uk/~vxc/publications/Abstraction_Computation.pdf
+
++ [CMU course on HoTT](http://www.cs.cmu.edu/~rwh/courses/hott/)   
+  Harper (2013) www.cs.cmu.edu/~rwh/courses/hott/
 
 ---
 
 # Part 0: What is Type Theory?
-
----
-
-## Two Iterpretations
-
-<ul>
-<li class="fragment">
-<a style="color:#e7ad52">**Type Theory** (TT)</a> (with caps) is an alternative foundation for Mathematics---an alternative to Set Theory (ST) </li>
-<li class="fragment">pioneered by Swedish mathematician <a style="color:#e7ad52">**Per Martin-Löf**</a></li>
-<li class="fragment"><a style="color:#e7ad52">**type theory** (tt)</a> (w/out caps) is the theory of types in programming languages </li>
-<li class="fragment"><a style="color:#e7ad52">TT</a> and <a style="color:#e7ad52">tt</a> are related but different subjects</li>
-</ul>
-
----
 
 ## Type Theory: the basic idea
 
